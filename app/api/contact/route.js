@@ -41,28 +41,3 @@ export async function POST(request) {
     return NextResponse.json({ error: 'Interner Server-Verarbeitungsfehler.' }, { status: 500 });
   }
 }
-
-export async function GET() {
-  try {
-    if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) {
-      console.error('Supabase env not configured (GET)')
-      return NextResponse.json({ error: 'Server not configured: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY missing' }, { status: 500 })
-    }
-
-    const { data, error } = await supabase
-      .from('contact_messages')
-      .select('*')
-      .order('created_at', { ascending: false })
-      .limit(50);
-
-    if (error) {
-      console.error('Supabase DB-Fehler (GET):', error);
-      return NextResponse.json({ error: 'Fehler beim Laden der Formulardaten.' }, { status: 500 });
-    }
-
-    return NextResponse.json({ success: true, data }, { status: 200 });
-  } catch (error) {
-    console.error('Serverfehler (GET):', error);
-    return NextResponse.json({ error: 'Interner Server-Verarbeitungsfehler.' }, { status: 500 });
-  }
-}

@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -9,13 +9,13 @@ export default function Contact() {
     service: 'Programmierung & Entwicklung',
     message: ''
   });
-  const [status, setStatus] = useState({ loading: false, success: null, error: null });
+  const [status, setStatus] = useState<{ loading: boolean; success: string | null; error: string | null }>({ loading: false, success: null, error: null });
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus({ loading: true, success: null, error: null });
 
@@ -35,7 +35,8 @@ export default function Contact() {
         throw new Error(result.error || 'Fehler beim Speichern.');
       }
     } catch (err) {
-      setStatus({ loading: false, success: null, error: err.message || 'Etwas ist schiefgelaufen.' });
+      const errorMessage = err instanceof Error ? err.message : 'Etwas ist schiefgelaufen.';
+      setStatus({ loading: false, success: null, error: errorMessage });
     }
   };
 
@@ -183,7 +184,7 @@ export default function Contact() {
               <textarea 
                 name="message" 
                 required
-                rows="6"
+                rows={6}
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full bg-[#0b111e]/60 border border-gray-800 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600 resize-none"
