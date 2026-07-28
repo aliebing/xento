@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useState } from "react";
 
 type ContactEntry = {
   id: string;
@@ -12,34 +12,17 @@ type ContactEntry = {
   created_at: string;
 };
 
-export default function ContactDashboard() {
-  const [entries, setEntries] = useState<ContactEntry[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+export default function ContactDashboard({ initialEntries }: { initialEntries?: ContactEntry[] }) {
+  const [entries, setEntries] = useState<ContactEntry[]>(initialEntries ?? []);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const loadEntries = async () => {
+  // Refresh will reload the page so data is fetched server-side again (keeps credentials on server)
+  const refresh = () => {
     setIsLoading(true);
     setError(null);
-
-    try {
-      const response = await fetch('/api/contact');
-      const result = await response.json();
-
-      if (!response.ok || !result.success) {
-        throw new Error(result.error || 'Daten konnten nicht geladen werden.');
-      }
-
-      setEntries(result.data ?? []);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Unbekannter Fehler');
-    } finally {
-      setIsLoading(false);
-    }
+    window.location.reload();
   };
-
-  useEffect(() => {
-    loadEntries();
-  }, []);
 
   return (
     <section className="rounded-3xl border border-white/10 bg-[#0b111e]/80 p-6 shadow-2xl shadow-cyan-500/10">
@@ -47,13 +30,14 @@ export default function ContactDashboard() {
         <div>
           <h2 className="text-3xl font-extrabold text-white">Admin Dashboard</h2>
           <p className="mt-2 text-sm text-gray-400 max-w-2xl">
-            Hier siehst du die zuletzt eingegangenen Kontaktanfragen. Die Daten kommen direkt aus der Supabase-Datenbank.
+            Hier siehst du die zuletzt eingegangenen Kontaktanfragen. Die Daten wurden serverseitig geladen, sodass keine Geheimnisse im Browser liegen.
           </p>
         </div>
         <button
           type="button"
-          onClick={loadEntries}
-          className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-cyan-400"
+          onClick={refresh}
+          disabled={isLoading}
+          className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-cyan-400 disabled:opacity-50"
         >
           Aktualisieren
         </button>
