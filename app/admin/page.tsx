@@ -26,7 +26,7 @@ export default async function AdminPage() {
 
   return (
     <div className="bg-[#060b13] min-h-screen text-white">
-      <Navbar />
+      <Navbar minimal />
       <main className="pt-28 pb-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10 rounded-3xl border border-white/10 bg-[#0d1420]/80 p-8 shadow-2xl shadow-black/20">
