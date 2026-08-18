@@ -6,6 +6,7 @@ import Projects from "@/components/sections/Projects";
 import Technologies from "@/components/sections/Technologies";
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
+import References from "@/components/sections/References";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Services /> 
         <Projects /> 
         <Technologies /> 
+        <References /> 
         <About /> 
         <Contact /> 
       </main>

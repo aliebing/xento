@@ -30,6 +30,9 @@ export default function Navbar({ minimal }: NavbarProps) {
                 <Link href="#techstack" className="text-sm font-normal text-gray-400 hover:text-white transition-colors">
                   Tech-Stack
                 </Link>
+                <Link href="#references" className="text-sm font-normal text-gray-400 hover:text-white transition-colors">
+                  Referenzen
+                </Link>
                 <Link href="#about" className="text-sm font-normal text-gray-400 hover:text-white transition-colors">
                   Über uns
                 </Link>
