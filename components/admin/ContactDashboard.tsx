@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { serviceLabelDe } from "@/lib/contact";
 
 type ContactEntry = {
   id: string;
@@ -8,6 +9,7 @@ type ContactEntry = {
   email: string;
   company: string | null;
   service: string | null;
+  lang: string | null;
   message: string;
   created_at: string;
 };
@@ -81,7 +83,10 @@ export default function ContactDashboard({ initialEntries }: { initialEntries?: 
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
                 <div className="space-y-2">
                   <div className="flex flex-wrap gap-3 text-sm text-gray-400">
-                    <span className="rounded-full bg-white/5 px-3 py-1">{entry.service ?? 'Keine Dienstleistung angegeben'}</span>
+                    <span className="rounded-full bg-white/5 px-3 py-1">{serviceLabelDe(entry.service)}</span>
+                    {entry.lang ? (
+                      <span className="rounded-full bg-cyan-500/10 px-3 py-1 text-cyan-300">{entry.lang.toUpperCase()}</span>
+                    ) : null}
                     <span className="rounded-full bg-white/5 px-3 py-1">{new Date(entry.created_at).toLocaleString('de-DE')}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-white">{entry.name}</h3>

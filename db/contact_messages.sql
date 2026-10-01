@@ -9,6 +9,7 @@ create table public.contact_messages (
   email text not null,
   company text,
   service text,
+  lang text,
   message text not null,
   created_at timestamptz default now()
 );

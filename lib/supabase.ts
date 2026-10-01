@@ -52,6 +52,7 @@ export type ContactMessage = {
   email: string;
   company: string | null;
   service: string | null;
+  lang: string | null;
   message: string;
   created_at: string;
 };
