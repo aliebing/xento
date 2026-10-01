@@ -23,14 +23,14 @@ Das inhaltliche Konzept steht in `explaining.txt` und wird vollständig übernom
 
 ## Routing und Struktur
 
-- `app/layout.tsx`, `app/page.tsx`, `app/impressum/`, `app/datenschutz/` ziehen nach `app/[lang]/`. `app/admin` und `app/api` bleiben außerhalb.
+- `app/layout.tsx`, `app/page.tsx`, `app/impressum/`, `app/datenschutz/` ziehen nach `app/[lang]/`. `app/api` bleibt außerhalb. `app/admin` bleibt unter derselben URL, bekommt aber ein eigenes Root-Layout (`app/admin/layout.tsx`, `lang="de"`), weil kein gemeinsames Layout oberhalb von `app/[lang]` und `app/admin` existiert.
 - Sprachen: `en` (Standard) und `de`. `generateStaticParams` erzeugt beide statisch. Unbekannte `lang`-Werte führen über `hasLocale` zu 404.
 - `<html lang>` entspricht dem Pfad. Titel, Beschreibung und OpenGraph-Daten kommen pro Sprache aus dem Wörterbuch. `alternates.languages` setzt `hreflang` für `en` und `de`.
 - `proxy.ts`:
   - Der Admin-Zweig (Basic Auth für `/admin/:path*`) bleibt unverändert.
   - Neu: Pfade ohne Sprachpräfix werden auf `/en/…` oder `/de/…` umgeleitet. Gewählt wird nach `Accept-Language`, Fallback `en`.
   - Ausgenommen: `/api`, `/admin`, `/_next` und Dateien mit Endung (Bilder, Favicon).
-- Wörterbücher: `app/[lang]/dictionaries/en.json` und `de.json`. `en.json` ist die Typquelle, `de.json` muss dieselbe Struktur haben. Die Seite lädt das Wörterbuch auf dem Server und reicht jeder Sektion ihren Teil als Props. Client-Komponenten (`NavBar`, `Contact`, Umschalter) erhalten ihre Texte ebenfalls als Props, es wird kein Wörterbuch an den Client ausgeliefert.
+- Wörterbücher: `lib/i18n/dictionaries/en.json` und `de.json`. `en.json` ist die Typquelle, `de.json` muss dieselbe Struktur haben. Die Seite lädt das Wörterbuch auf dem Server und reicht jeder Sektion ihren Teil als Props. Client-Komponenten (`NavBar`, `Contact`, Umschalter) erhalten ihre Texte ebenfalls als Props, es wird kein Wörterbuch an den Client ausgeliefert.
 - **Sprachumschalter** oben rechts im Header als Client-Komponente: Flagge plus Kürzel (🇬🇧 EN / 🇩🇪 DE). Er verlinkt auf dieselbe Seite in der anderen Sprache (`/en/impressum` ↔ `/de/impressum`). Auf dem Handy steht er neben dem Hamburger-Menü.
 - Interne Links (Logo, Footer) enthalten das Sprachpräfix.
 
@@ -75,7 +75,7 @@ Alle Texte entstehen auf Basis von `explaining.txt` in beiden Sprachen. Vor dem 
 
 - `npm run build` und `npm run lint` laufen ohne Fehler; `en.json` und `de.json` haben identische Schlüssel (Typcheck).
 - `/` leitet je nach `Accept-Language` auf `/en` oder `/de` um; unbekannte Sprachen landen auf `/en`.
-- `/en`, `/de`, `/en/impressum`, `/de/datenschutz` liefern 200; `/fr` liefert 404.
+- `/en`, `/de`, `/en/impressum`, `/de/datenschutz` liefern 200; `/fr` wird vom Proxy auf `/en/fr` umgeleitet und endet dort mit 404.
 - Der Umschalter wechselt auf dieselbe Seite in der anderen Sprache, auch mobil.
 - `/admin` verlangt weiterhin Basic Auth, `/api/contact` bleibt erreichbar.
 - Kontaktformular: Erfolg und Fehler erscheinen in der richtigen Sprache, die Anfrage landet mit Sprachangabe in der Datenbank.
