@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "title": "Xento IT-Solutions | Softwareentwicklung & IT-Beratung",
+    "description": "Xento unterstützt Unternehmen bei PHP-/Symfony-Entwicklung, Softwarearchitektur und der Modernisierung geschäftskritischer Webanwendungen – persönlich umgesetzt von Alexander Liebing. Karlsruhe, vor Ort & remote.",
+    "ogTitle": "Xento IT-Solutions | Softwareentwicklung & IT-Beratung",
+    "ogDescription": "Senior-Softwareentwicklung und IT-Beratung für PHP/Symfony, Architektur und Legacy-Modernisierung – persönlich umgesetzt von Alexander Liebing, Karlsruhe & remote.",
+    "ogLocale": "de_DE"
+  },
+  "nav": {
+    "services": "Leistungen",
+    "experience": "Projekterfahrung",
+    "technologies": "Technologien",
+    "about": "Über mich",
+    "contact": "Kontakt",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "languageLabel": "Sprache"
+  },
+  "hero": {
+    "eyebrow": "Softwareentwicklung & IT-Beratung · Karlsruhe & Remote",
+    "titleLine1": "Komplexe Webanwendungen.",
+    "titleHighlight": "Sauber entwickelt. Langfristig wartbar.",
+    "text": "Xento unterstützt Unternehmen bei anspruchsvoller PHP-/Symfony-Entwicklung, Softwarearchitektur und der Modernisierung bestehender Systeme. Persönlich umgesetzt von Alexander Liebing – mit über 20 Jahren Erfahrung in der Softwareentwicklung.",
+    "ctaPrimary": "Projekt besprechen",
+    "ctaSecondary": "Projekterfahrung ansehen",
+    "profile": {
+      "name": "Alexander Liebing",
+      "imageAlt": "Porträt von Alexander Liebing",
+      "role": "Senior Software Engineer & Consultant",
+      "yearsLabel": "Jahre Erfahrung",
+      "projectsLabel": "Großprojekte"
+    }
+  },
+  "services": {
+    "title": "Leistungen",
+    "intro": "Xento unterstützt Unternehmen bei der Entwicklung, Modernisierung und Stabilisierung geschäftskritischer Webanwendungen.",
+    "items": [
+      {
+        "title": "Softwareentwicklung",
+        "subtitle": "Skalierbare und sichere Backend- und Frontend-Anwendungen",
+        "points": [
+          "Fullstack-Entwicklung mit PHP (Symfony, Laravel) und Vue.js",
+          "Robuste REST- und SOAP-Schnittstellen",
+          "Automatisierte Tests (TDD, E2E mit Selenium/PHPUnit)",
+          "Sichere, DSGVO-konforme Umsetzung"
+        ]
+      },
+      {
+        "title": "Architektur & Modernisierung",
+        "subtitle": "Zukunftssichere Systeme auf Basis Ihres bestehenden Codes",
+        "points": [
+          "Architekturentwürfe (Domain-Driven Design, State-Machines)",
+          "Refactoring und Migration von Legacy-Monolithen zu Services",
+          "Technologie-Evaluation und Migrationskonzepte",
+          "CI/CD-Pipelines und agile Entwicklungsprozesse"
+        ]
+      },
+      {
+        "title": "Technische Betreuung",
+        "subtitle": "Zuverlässiger Betrieb und Weiterentwicklung Ihrer Anwendungen",
+        "points": [
+          "Performance-Tuning und Datenbankoptimierung",
+          "Fehleranalyse mit Monitoring und Log-Management (Graylog)",
+          "Zeitnaher Bugfix- und Hotfix-Service",
+          "Updates von Framework- und PHP-Versionen (Symfony/Laravel)"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Projekterfahrung",
+    "intro": "Ein Auszug aus über 20 Jahren Projektarbeit im Enterprise- und KMU-Umfeld.",
+    "resultsLabel": "Ergebnisse & Tätigkeiten:",
+    "projects": [
+      {
+        "period": "07/2019 – 03/2026 (6 Jahre)",
+        "role": "Lead Backend Developer",
+        "title": "Kundenportal & ERP-Architektur (Energieversorger)",
+        "description": "Modernisierung und Betreuung des Kunden- und Vertragsportals für einen führenden Energiewirtschafts-Dienstleister. Fokussiert auf Skalierbarkeit, Performance und moderne REST-APIs.",
+        "tasks": [
+          "Refactoring veralteter SOAP-Schnittstellen zu hochperformanten REST-APIs.",
+          "Konzeption und Implementierung eines flexiblen Mahnverfahren-Moduls.",
+          "Performance-Tuning von Datenbankabfragen und Massenverarbeitung (CSV/Cron-Jobs).",
+          "Sicherstellung der DSGVO-Konformität (automatisierte Fristenprüfung und Datenlöschung).",
+          "Etablierung eines Monitorings und Log-Analysen über Graylog zur Fehlererkennung."
+        ],
+        "tags": ["PHP 8.x", "Slim", "Idiorm", "REST API", "Docker", "Graylog", "SQL", "Scrum"]
+      },
+      {
+        "period": "01/2017 – 12/2017 (1 Jahr)",
+        "role": "Symfony Core Developer",
+        "title": "Workflow-Modul für Mehrmandantenfähigkeit (Schiffswerft)",
+        "description": "Überführung eines komplexen Bauabwicklungsmoduls aus einem Monolithen in ein eigenständiges, mandantenfähiges Symfony-Workflow-Modul.",
+        "tasks": [
+          "Erweiterung der Symfony Workflow-Kernkomponenten für mandantenspezifische Logik.",
+          "Implementierung komplexer Prozessketten mittels Pipeline-Patterns (Event-Dispatcher/Subscriber).",
+          "Erstellung von Twig-Extensions für dynamische Sub-Templates (Rechte- und Rollensteuerung).",
+          "Verfassen der technischen Spezifikationen und Systemdokumentation in Markdown."
+        ],
+        "tags": ["Symfony 3/4", "Workflow Engine", "Doctrine", "Pipeline Pattern", "Event-Dispatcher"]
+      },
+      {
+        "period": "2016 – 2017",
+        "role": "Symfony Core Developer",
+        "title": "E-Commerce-Automatisierung & Subscription (Security Software)",
+        "description": "Entwicklung und Automatisierung von Abo- und Vertragsänderungsprozessen innerhalb des globalen E-Commerce-Kundenportals.",
+        "tasks": [
+          "Erweiterung der Sonata-Admin Backend-Schnittstellen.",
+          "Implementierung automatisierter Validierungen bei Vertragsänderungen.",
+          "Erstellung von Twig-Extensions für dynamische Sub-Templates (Rechte- und Rollensteuerung).",
+          "Qualitätssicherung durch End-to-End-Testing mit Selenium und Cucumber-Gherkin."
+        ],
+        "tags": ["Symfony 3/4", "Sonata Admin", "Doctrine", "Selenium", "Cucumber", "E-Commerce", "Subscription Management"]
+      },
+      {
+        "period": "2015 – 2016",
+        "role": "Symfony Core Developer",
+        "title": "Migration Buchungsstrecke (Internetagentur)",
+        "description": "Entwicklung und Migration einer geschäftskritischen Buchungsstrecke von Typo3 in eine performante, eigenständige Symfony-Anwendung.",
+        "tasks": [
+          "Kopplung von Legacy-Content-Systemen mit dem neuen Buchungskern.",
+          "Entwicklung dynamischer Pricing- und Buchungs-Schnittstellen."
+        ],
+        "tags": ["Symfony 3", "Typo3API", "REST", "Bootstrap", "MySQL", "Booking Engine"]
+      },
+      {
+        "period": "2009 – 2014",
+        "role": "Magento Developer",
+        "title": "Entwicklung White-Label Reisesysteme (Reiseportale)",
+        "description": "Entwicklung von flexiblen White-Label-Lösungen für namhafte Reiseportale zur dynamischen Auslieferung von Urlaubsangeboten.",
+        "tasks": [
+          "Erstellung von jQuery-basierten Plugins für interaktive Buchungselemente.",
+          "Entwicklung von individuellen Versand- und Preis-Update-Modulen für Magento-Shops.",
+          "Durchführung komplexer Plattform-Upgrades (Magento 1.5 auf 1.7)."
+        ],
+        "tags": ["Magento", "jQuery", "PHP", "Frontend-Widgets"]
+      }
+    ],
+    "ownProject": {
+      "badge": "Eigenes Projekt",
+      "title": "AI Movie Finder",
+      "descriptionBefore": "Ein intelligentes Movie-Recommendation-System mit ",
+      "descriptionHighlight": "KI-gestützter Analyse",
+      "descriptionAfter": " Ihrer Vorlieben. Der Algorithmus kombiniert gewichtete Genre-Präferenzen mit IMDB-Ratings und Qualitätsmetriken, um personalisierte Filmempfehlungen zu generieren, die perfekt zu Ihrem Geschmack passen.",
+      "tags": ["Python", "streamlit", "sqlite"],
+      "cta": "Projekt ansehen →"
+    }
+  },
+  "technologies": {
+    "title": "Technologien",
+    "intro": "Die Werkzeuge, mit denen ich täglich arbeite, um Anforderungen in performanten, wartbaren Code zu überführen.",
+    "focusLabel": "Schwerpunkt",
+    "focusItems": ["PHP 8", "Symfony", "REST-APIs", "Softwarearchitektur", "Legacy-Modernisierung"],
+    "furtherLabel": "Weitere Erfahrung",
+    "furtherItems": ["Laravel", "Vue.js", "MySQL/MariaDB", "Docker", "Redis", "Graylog", "CI/CD", "AWS"]
+  },
+  "about": {
+    "badge": "Der Experte hinter Xento",
+    "title": "Über Alexander Liebing",
+    "imageAlt": "Porträt von Alexander Liebing",
+    "lead": "Ich bin leidenschaftlicher Softwarearchitekt und Fullstack-Entwickler mit starkem Fokus auf Robustheit, sauberen Code (Clean Code) und pragmatische Lösungen.",
+    "paragraphs": [
+      "Seit meiner IHK-Zertifizierung als Softwareentwickler im Internet (2001) und meiner Ausbildung zum Fachinformatiker (2003) habe ich Systeme für namhafte Konzerne wie die EnBW (Powercloud) und die Lürssenwerft konzipiert und betreut.",
+      "Mit Xento bündele ich meine langjährige Erfahrung aus Enterprise- und KMU-Projekten unter einer eigenen Marke. Ob Sie zusätzliche Entwicklungskapazität (Symfony / Laravel), architektonische Beratung bei Legacy-Migrationen oder professionellen Support für den Systembetrieb suchen: Ich arbeite direkt mit Ihnen zusammen."
+    ],
+    "features": [
+      { "title": "IHK-Zertifiziert", "description": "Softwareentwicklung 2001 / 2003" },
+      { "title": "Architekturfokus", "description": "DDD, OOP, State-Machines, Workflows" },
+      { "title": "Flexibler Einsatz", "description": "Remote oder vor Ort im Raum Karlsruhe" }
+    ]
+  },
+  "contact": {
+    "title": "Starten Sie Ihr Projekt",
+    "intro": "Sie benötigen Unterstützung bei Entwicklung, Beratung oder Betreuung Ihrer Anwendungen? Schreiben Sie mir.",
+    "detailsTitle": "Kontaktdaten",
+    "detailsText": "Zögern Sie nicht, Kontakt aufzunehmen. Ich antworte in der Regel innerhalb von 24 Stunden.",
+    "emailLabel": "E-Mail",
+    "phoneLabel": "Telefon",
+    "locationLabel": "Standort",
+    "locationValue": "Karlsruhe, Deutschland (vor Ort & Remote)",
+    "form": {
+      "name": "Ihr Name / Ansprechpartner *",
+      "namePlaceholder": "z. B. Max Mustermann",
+      "email": "E-Mail-Adresse *",
+      "emailPlaceholder": "ihre@mail.de",
+      "company": "Firma",
+      "companyPlaceholder": "z. B. Muster GmbH",
+      "service": "Gewünschte Leistung *",
+      "serviceOptions": {
+        "development": "Softwareentwicklung",
+        "architecture": "Architektur & Modernisierung",
+        "support": "Technische Betreuung"
+      },
+      "message": "Details zu Ihrer Anfrage *",
+      "messagePlaceholder": "Bitte geben Sie hier alle relevanten Informationen zu Ihrem Projekt oder Anliegen an.",
+      "sending": "Anfrage wird gesendet…",
+      "submit": "Anfrage absenden",
+      "success": "Anfrage erfolgreich gesendet. Vielen Dank!"
+    },
+    "errors": {
+      "missing_fields": "Bitte füllen Sie alle Pflichtfelder aus.",
+      "invalid_email": "Bitte geben Sie eine gültige E-Mail-Adresse an.",
+      "field_too_long": "Eines der Felder ist zu lang.",
+      "rate_limited": "Zu viele Anfragen. Bitte versuchen Sie es später erneut.",
+      "save_failed": "Ihre Anfrage konnte nicht gespeichert werden. Bitte versuchen Sie es später erneut.",
+      "server_not_configured": "Das Kontaktformular ist derzeit nicht verfügbar. Bitte schreiben Sie mir direkt eine E-Mail.",
+      "internal": "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut.",
+      "network": "Netzwerkfehler. Bitte prüfen Sie Ihre Verbindung und versuchen Sie es erneut."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Xento IT-Solutions. Alle Rechte vorbehalten.",
+    "impressum": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "legal": {
+    "notice": "Aus rechtlichen Gründen nur auf Deutsch verfügbar.",
+    "impressumTitle": "Impressum | Xento IT-Solutions",
+    "datenschutzTitle": "Datenschutzerklärung | Xento IT-Solutions"
+  }
+}

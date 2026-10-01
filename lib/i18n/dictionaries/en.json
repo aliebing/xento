@@ -1,0 +1,221 @@
+{
+  "meta": {
+    "title": "Xento IT-Solutions | Software Development & IT Consulting",
+    "description": "Xento supports companies with PHP/Symfony development, software architecture and the modernisation of business-critical web applications – personally delivered by Alexander Liebing. Karlsruhe, on site & remote.",
+    "ogTitle": "Xento IT-Solutions | Software Development & IT Consulting",
+    "ogDescription": "Senior software development and IT consulting for PHP/Symfony, architecture and legacy modernisation – personally delivered by Alexander Liebing, Karlsruhe & remote.",
+    "ogLocale": "en_US"
+  },
+  "nav": {
+    "services": "Services",
+    "experience": "Experience",
+    "technologies": "Technologies",
+    "about": "About me",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageLabel": "Language"
+  },
+  "hero": {
+    "eyebrow": "Software Development & IT Consulting · Karlsruhe & Remote",
+    "titleLine1": "Complex web applications.",
+    "titleHighlight": "Built cleanly. Maintainable for the long run.",
+    "text": "Xento supports companies with demanding PHP/Symfony development, software architecture and the modernisation of existing systems. Personally delivered by Alexander Liebing – with more than 20 years of experience in software development.",
+    "ctaPrimary": "Discuss a project",
+    "ctaSecondary": "View project experience",
+    "profile": {
+      "name": "Alexander Liebing",
+      "imageAlt": "Portrait of Alexander Liebing",
+      "role": "Senior Software Engineer & Consultant",
+      "yearsLabel": "Years of experience",
+      "projectsLabel": "Large-scale projects"
+    }
+  },
+  "services": {
+    "title": "Services",
+    "intro": "Xento supports companies with the development, modernisation and stabilisation of business-critical web applications.",
+    "items": [
+      {
+        "title": "Software Development",
+        "subtitle": "Scalable, secure back-end and front-end applications",
+        "points": [
+          "Full-stack development with PHP (Symfony, Laravel) and Vue.js",
+          "Robust REST and SOAP interfaces",
+          "Automated testing (TDD, E2E with Selenium/PHPUnit)",
+          "Secure, GDPR-compliant implementation"
+        ]
+      },
+      {
+        "title": "Architecture & Modernisation",
+        "subtitle": "Future-proof systems built on your existing code",
+        "points": [
+          "Architecture design (Domain-Driven Design, state machines)",
+          "Refactoring and migration of legacy monoliths to services",
+          "Technology evaluation and migration concepts",
+          "CI/CD pipelines and agile development processes"
+        ]
+      },
+      {
+        "title": "Technical Support",
+        "subtitle": "Reliable operation and continued development of your applications",
+        "points": [
+          "Performance tuning and database optimisation",
+          "Error analysis with monitoring and log management (Graylog)",
+          "Prompt bug-fixing and hotfix service",
+          "Framework and PHP version updates (Symfony/Laravel)"
+        ]
+      }
+    ]
+  },
+  "experience": {
+    "title": "Project experience",
+    "intro": "A selection from more than 20 years of project work in enterprise and SME environments.",
+    "resultsLabel": "Results & responsibilities:",
+    "projects": [
+      {
+        "period": "07/2019 – 03/2026 (6 years)",
+        "role": "Lead Backend Developer",
+        "title": "Customer portal & ERP architecture (energy utility)",
+        "description": "Modernisation and maintenance of the customer and contract portal for a leading service provider in the energy sector. Focus on scalability, performance and modern REST APIs.",
+        "tasks": [
+          "Refactoring of outdated SOAP interfaces into high-performance REST APIs.",
+          "Design and implementation of a flexible dunning module.",
+          "Performance tuning of database queries and bulk processing (CSV/cron jobs).",
+          "Ensuring GDPR compliance (automated deadline checks and data deletion).",
+          "Establishing monitoring and log analysis with Graylog for error detection."
+        ],
+        "tags": ["PHP 8.x", "Slim", "Idiorm", "REST API", "Docker", "Graylog", "SQL", "Scrum"]
+      },
+      {
+        "period": "01/2017 – 12/2017 (1 year)",
+        "role": "Symfony Core Developer",
+        "title": "Workflow module for multi-tenancy (shipyard)",
+        "description": "Extraction of a complex shipbuilding-processing module from a monolith into a standalone, multi-tenant Symfony workflow module.",
+        "tasks": [
+          "Extension of the Symfony Workflow core components for tenant-specific logic.",
+          "Implementation of complex process chains using pipeline patterns (event dispatcher/subscriber).",
+          "Creation of Twig extensions for dynamic sub-templates (permission and role control).",
+          "Writing technical specifications and system documentation in Markdown."
+        ],
+        "tags": ["Symfony 3/4", "Workflow Engine", "Doctrine", "Pipeline Pattern", "Event-Dispatcher"]
+      },
+      {
+        "period": "2016 – 2017",
+        "role": "Symfony Core Developer",
+        "title": "E-commerce automation & subscriptions (security software)",
+        "description": "Development and automation of subscription and contract-change processes within a global e-commerce customer portal.",
+        "tasks": [
+          "Extension of the Sonata Admin back-end interfaces.",
+          "Implementation of automated validation for contract changes.",
+          "Creation of Twig extensions for dynamic sub-templates (permission and role control).",
+          "Quality assurance through end-to-end testing with Selenium and Cucumber/Gherkin."
+        ],
+        "tags": ["Symfony 3/4", "Sonata Admin", "Doctrine", "Selenium", "Cucumber", "E-Commerce", "Subscription Management"]
+      },
+      {
+        "period": "2015 – 2016",
+        "role": "Symfony Core Developer",
+        "title": "Booking funnel migration (web agency)",
+        "description": "Development and migration of a business-critical booking funnel from Typo3 to a high-performance, standalone Symfony application.",
+        "tasks": [
+          "Coupling legacy content systems with the new booking core.",
+          "Development of dynamic pricing and booking interfaces."
+        ],
+        "tags": ["Symfony 3", "Typo3API", "REST", "Bootstrap", "MySQL", "Booking Engine"]
+      },
+      {
+        "period": "2009 – 2014",
+        "role": "Magento Developer",
+        "title": "White-label travel systems (travel portals)",
+        "description": "Development of flexible white-label solutions for well-known travel portals for the dynamic delivery of holiday offers.",
+        "tasks": [
+          "Creation of jQuery-based plugins for interactive booking elements.",
+          "Development of custom shipping and price-update modules for Magento shops.",
+          "Execution of complex platform upgrades (Magento 1.5 to 1.7)."
+        ],
+        "tags": ["Magento", "jQuery", "PHP", "Frontend-Widgets"]
+      }
+    ],
+    "ownProject": {
+      "badge": "Own project",
+      "title": "AI Movie Finder",
+      "descriptionBefore": "An intelligent movie recommendation system with ",
+      "descriptionHighlight": "AI-assisted analysis",
+      "descriptionAfter": " of your preferences. The algorithm combines weighted genre preferences with IMDB ratings and quality metrics to generate personalised recommendations that fit your taste perfectly.",
+      "tags": ["Python", "streamlit", "sqlite"],
+      "cta": "Visit project →"
+    }
+  },
+  "technologies": {
+    "title": "Technologies",
+    "intro": "The tools I work with every day to turn requirements into performant, maintainable code.",
+    "focusLabel": "Focus",
+    "focusItems": ["PHP 8", "Symfony", "REST APIs", "Software architecture", "Legacy modernisation"],
+    "furtherLabel": "Further experience",
+    "furtherItems": ["Laravel", "Vue.js", "MySQL/MariaDB", "Docker", "Redis", "Graylog", "CI/CD", "AWS"]
+  },
+  "about": {
+    "badge": "The expert behind Xento",
+    "title": "About Alexander Liebing",
+    "imageAlt": "Portrait of Alexander Liebing",
+    "lead": "I am a passionate software architect and full-stack developer with a strong focus on robustness, clean code and pragmatic solutions.",
+    "paragraphs": [
+      "Since my IHK certification as an internet software developer (2001) and my apprenticeship as an IT specialist (2003), I have designed and maintained systems for well-known companies such as EnBW (Powercloud) and Lürssen shipyard.",
+      "With Xento I bundle my many years of experience from enterprise and SME projects under my own brand. Whether you need additional development capacity (Symfony / Laravel), architectural advice on legacy migrations or professional support for system operations: I work with you directly."
+    ],
+    "features": [
+      { "title": "IHK certified", "description": "Software development 2001 / 2003" },
+      { "title": "Architecture focus", "description": "DDD, OOP, state machines, workflows" },
+      { "title": "Flexible deployment", "description": "Remote or on site in the Karlsruhe area" }
+    ]
+  },
+  "contact": {
+    "title": "Start your project",
+    "intro": "Need support with development, consulting or maintenance of your applications? Get in touch.",
+    "detailsTitle": "Contact details",
+    "detailsText": "Feel free to get in touch. I usually reply within 24 hours.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "locationLabel": "Location",
+    "locationValue": "Karlsruhe, Germany (on site & remote)",
+    "form": {
+      "name": "Your name / contact person *",
+      "namePlaceholder": "e.g. Jane Doe",
+      "email": "Email address *",
+      "emailPlaceholder": "you@company.com",
+      "company": "Company",
+      "companyPlaceholder": "e.g. Example Ltd.",
+      "service": "Service of interest *",
+      "serviceOptions": {
+        "development": "Software development",
+        "architecture": "Architecture & modernisation",
+        "support": "Technical support"
+      },
+      "message": "Details of your request *",
+      "messagePlaceholder": "Please include all relevant information about your project or request.",
+      "sending": "Sending request…",
+      "submit": "Send request",
+      "success": "Request sent successfully. Thank you!"
+    },
+    "errors": {
+      "missing_fields": "Please fill in all required fields.",
+      "invalid_email": "Please enter a valid email address.",
+      "field_too_long": "One of the fields is too long.",
+      "rate_limited": "Too many requests. Please try again later.",
+      "save_failed": "Your request could not be saved. Please try again later.",
+      "server_not_configured": "The contact form is currently unavailable. Please email me directly.",
+      "internal": "Something went wrong. Please try again later.",
+      "network": "Network error. Please check your connection and try again."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Xento IT-Solutions. All rights reserved.",
+    "impressum": "Legal notice",
+    "privacy": "Privacy policy"
+  },
+  "legal": {
+    "notice": "For legal reasons, this page is only available in German.",
+    "impressumTitle": "Legal notice (Impressum) | Xento IT-Solutions",
+    "datenschutzTitle": "Privacy policy (Datenschutz) | Xento IT-Solutions"
+  }
+}
