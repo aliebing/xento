@@ -1,0 +1,90 @@
+import type { Dictionary } from '@/lib/i18n/dictionaries';
+import OwnProjectCard from './OwnProjectCard';
+
+export default function Experience({ dict }: { dict: Dictionary['experience'] }) {
+  return (
+    <section id="experience" className="w-full bg-[#060b13] text-white py-30 px-6">
+      <div className="max-w-4xl mx-auto">
+
+        {/* Header-Bereich */}
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+            {dict.title}
+          </h2>
+          <div className="w-12 h-1 bg-blue-500 mx-auto rounded-full mt-2"></div>
+          <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+            {dict.intro}
+          </p>
+        </div>
+
+        {/* Projekt-Liste mit Zeitleisten-Effekt */}
+        <div className="relative border-l border-gray-800/60 pl-6 md:pl-8 space-y-12">
+
+          {dict.projects.map((project) => (
+            <div key={project.title} className="relative group">
+
+              {/* Der blau leuchtende Timeline-Punkt */}
+              <div className="absolute -left-[31px] md:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#060b13] border-2 border-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.6)]" />
+
+              {/* Projekt-Karte */}
+              <div className="w-full bg-[#0b111e]/50 border border-gray-800/40 rounded-xl p-6 md:p-8 backdrop-blur-sm shadow-xl">
+
+                {/* Meta-Zeile (Datum & Rolle) */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-gray-800/60 pb-4 mb-5">
+                  <span className="text-xs font-semibold text-cyan-400 bg-cyan-950/40 border border-cyan-800/30 px-2.5 py-1 rounded">
+                    {project.period}
+                  </span>
+                  <span className="text-xs text-gray-500 font-medium">
+                    {project.role}
+                  </span>
+                </div>
+
+                {/* Titel & Beschreibung */}
+                <h3 className="text-xl md:text-2xl font-bold text-gray-100 mb-3">
+                  {project.title}
+                </h3>
+                <p className="text-sm md:text-base text-gray-400 leading-relaxed mb-6">
+                  {project.description}
+                </p>
+
+                {/* Aufgaben / Ergebnisse */}
+                <div className="space-y-3 mb-6">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400">
+                    {dict.resultsLabel}
+                  </h4>
+                  <ul className="space-y-2 text-xs md:text-sm text-gray-400/90 list-none pl-0">
+                    {project.tasks.map((task) => (
+                      <li key={task} className="relative pl-5 before:content-['-'] before:absolute before:left-0 before:text-cyan-500 before:font-bold">
+                        {task}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Tech-Tags */}
+                <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-800/40">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2.5 py-1 text-xs font-medium text-gray-400 bg-gray-900/80 border border-gray-800/60 rounded transition-colors hover:border-gray-700 hover:text-gray-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+        {/* Eigenes Projekt (vorher eigene Sektion "Referenzen") */}
+        <div className="mt-16">
+          <OwnProjectCard dict={dict.ownProject} />
+        </div>
+
+      </div>
+    </section>
+  );
+}
