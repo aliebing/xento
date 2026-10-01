@@ -1,42 +1,58 @@
 'use client';
 import { ChangeEvent, useState } from 'react';
+import type { Locale } from '@/lib/i18n/config';
+import type { Dictionary } from '@/lib/i18n/dictionaries';
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    service: 'Programmierung & Entwicklung',
-    message: ''
-  });
+type ContactProps = {
+  lang: Locale;
+  dict: Dictionary['contact'];
+};
+
+const INITIAL_FORM = {
+  name: '',
+  email: '',
+  company: '',
+  service: 'development',
+  message: '',
+};
+
+export default function Contact({ lang, dict }: ContactProps) {
+  const [formData, setFormData] = useState(INITIAL_FORM);
   const [status, setStatus] = useState<{ loading: boolean; success: string | null; error: string | null }>({ loading: false, success: null, error: null });
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  // Der Server liefert nur Fehler-Codes; der Text kommt aus dem Wörterbuch der aktuellen Sprache.
+  const errorFor = (code: unknown): string =>
+    typeof code === 'string' && code in dict.errors
+      ? dict.errors[code as keyof typeof dict.errors]
+      : dict.errors.internal;
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus({ loading: true, success: null, error: null });
 
+    let response: Response;
     try {
-      const response = await fetch('/api/contact', {
+      response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, lang }),
       });
+    } catch {
+      setStatus({ loading: false, success: null, error: dict.errors.network });
+      return;
+    }
 
-      const result = await response.json();
+    const result = await response.json().catch(() => null);
 
-      if (response.ok) {
-        setStatus({ loading: false, success: 'Anfrage erfolgreich abgesendet und gespeichert!', error: null });
-        setFormData({ name: '', email: '', company: '', service: 'Programmierung & Entwicklung', message: '' });
-      } else {
-        throw new Error(result.error || 'Fehler beim Speichern.');
-      }
-    } catch (err) {
-      const errorMessage = err instanceof Error ? err.message : 'Etwas ist schiefgelaufen.';
-      setStatus({ loading: false, success: null, error: errorMessage });
+    if (response.ok) {
+      setStatus({ loading: false, success: dict.form.success, error: null });
+      setFormData(INITIAL_FORM);
+    } else {
+      setStatus({ loading: false, success: null, error: errorFor(result?.code) });
     }
   };
 
@@ -50,11 +66,11 @@ export default function Contact() {
         {/* Sektions-Header */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-            Starten wir Ihr Projekt
+            {dict.title}
           </h2>
           <div className="w-12 h-1 bg-blue-500 mx-auto rounded-full mt-2"></div>
           <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed pt-2">
-            Sie benötigen Unterstützung in der Programmierung, Beratung oder beim Support Ihrer Anwendungen? Schreiben Sie uns.
+            {dict.intro}
           </p>
         </div>
 
@@ -64,9 +80,9 @@ export default function Contact() {
           {/* LINKSE SPALTE: Kontaktdaten */}
           <div className="lg:col-span-4 bg-[#0b111e]/40 border border-gray-800/60 rounded-2xl p-8 backdrop-blur-sm shadow-xl space-y-8 h-full flex flex-col justify-between">
             <div>
-              <h3 className="text-xl font-bold text-gray-100 mb-3">Kontaktdaten</h3>
+              <h3 className="text-xl font-bold text-gray-100 mb-3">{dict.detailsTitle}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">
-                Zögern Sie nicht, Kontakt aufzunehmen. Wir antworten in der Regel innerhalb von 24 Stunden.
+                {dict.detailsText}
               </p>
             </div>
 
@@ -79,7 +95,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-500 block">E-Mail</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-500 block">{dict.emailLabel}</span>
                   <a href="mailto:aliebing@gmx.de" className="text-sm font-semibold text-gray-200 hover:text-cyan-400 transition-colors">aliebing@gmx.de</a>
                 </div>
               </div>
@@ -92,7 +108,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-500 block">Telefon</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-500 block">{dict.phoneLabel}</span>
                   <a href="tel:+491629405960" className="text-sm font-semibold text-gray-200 hover:text-cyan-400 transition-colors">+49 162 9405960</a>
                 </div>
               </div>
@@ -106,8 +122,8 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-500 block">Standort</span>
-                  <p className="text-sm font-semibold text-gray-200 leading-relaxed">Karlsruhe, Deutschland (vor Ort & Remote)</p>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-500 block">{dict.locationLabel}</span>
+                  <p className="text-sm font-semibold text-gray-200 leading-relaxed">{dict.locationValue}</p>
                 </div>
               </div>
             </div>
@@ -120,7 +136,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-gray-300">Ihr Name / Ansprechpartner *</label>
+                <label className="text-xs font-semibold text-gray-300">{dict.form.name}</label>
                 <input 
                   type="text" 
                   name="name" 
@@ -128,13 +144,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full bg-[#0b111e]/60 border border-gray-800 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
-                  placeholder="z. B. Max Mustermann"
+                  placeholder={dict.form.namePlaceholder}
                 />
               </div>
               
               {/* E-Mail */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-gray-300">E-Mail Adresse *</label>
+                <label className="text-xs font-semibold text-gray-300">{dict.form.email}</label>
                 <input 
                   type="email" 
                   name="email" 
@@ -142,7 +158,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full bg-[#0b111e]/60 border border-gray-800 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
-                  placeholder="ihre@mail.de"
+                  placeholder={dict.form.emailPlaceholder}
                 />
               </div>
             </div>
@@ -150,20 +166,20 @@ export default function Contact() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Firma */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-gray-300">Firma</label>
+                <label className="text-xs font-semibold text-gray-300">{dict.form.company}</label>
                 <input 
                   type="text" 
                   name="company" 
                   value={formData.company}
                   onChange={handleChange}
                   className="w-full bg-[#0b111e]/60 border border-gray-800 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
-                  placeholder="z. B. Muster GmbH"
+                  placeholder={dict.form.companyPlaceholder}
                 />
               </div>
               
               {/* Gewünschte Dienstleistung Dropdown */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-gray-300">Gewünschte Dienstleistung *</label>
+                <label className="text-xs font-semibold text-gray-300">{dict.form.service}</label>
                 <select 
                   name="service"
                   value={formData.service}
@@ -171,16 +187,16 @@ export default function Contact() {
                   className="w-full bg-[#0b111e]/60 border border-gray-800 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors appearance-none cursor-pointer"
                   style={{ backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center', backgroundSize: '16px' }}
                 >
-                  <option value="Programmierung & Entwicklung" className="bg-[#060b13]">Programmierung & Entwicklung</option>
-                  <option value="Beratung & Konzeption" className="bg-[#060b13]">Beratung & Konzeption</option>
-                  <option value="Support & Wartung" className="bg-[#060b13]">Support & Wartung</option>
+                  <option value="development" className="bg-[#060b13]">{dict.form.serviceOptions.development}</option>
+                  <option value="architecture" className="bg-[#060b13]">{dict.form.serviceOptions.architecture}</option>
+                  <option value="support" className="bg-[#060b13]">{dict.form.serviceOptions.support}</option>
                 </select>
               </div>
             </div>
 
             {/* Nachricht / Details */}
             <div className="space-y-2">
-              <label className="text-xs font-semibold text-gray-300">Details zu Ihrer Anfrage *</label>
+              <label className="text-xs font-semibold text-gray-300">{dict.form.message}</label>
               <textarea 
                 name="message" 
                 required
@@ -188,12 +204,12 @@ export default function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full bg-[#0b111e]/60 border border-gray-800 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600 resize-none"
-                placeholder="Bitte geben Sie hier alle relevanten Informationen zu Ihrem Projekt oder Anliegen an."
+                placeholder={dict.form.messagePlaceholder}
               ></textarea>
             </div>
 
             {/* Statusmeldungen */}
-            {status.loading && <p className="text-sm text-gray-400">Anfrage wird gesendet...</p>}
+            {status.loading && <p className="text-sm text-gray-400">{dict.form.sending}</p>}
             {status.success && <p className="text-sm text-green-500">{status.success}</p>}
             {status.error && <p className="text-sm text-red-500">{status.error}</p>}
             </div>
@@ -205,7 +221,7 @@ export default function Contact() {
                 disabled={status.loading}
                 className={`w-full px-6 py-4 font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 rounded-lg shadow-lg shadow-cyan-500/20 transition-all duration-200 ${status.loading ? 'opacity-50 cursor-not-allowed' : ''}`}
               >           
-                Anfrage absenden      
+                {dict.form.submit}      
               </button>
             </div>
           </form>
