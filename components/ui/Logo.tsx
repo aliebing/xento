@@ -11,8 +11,8 @@ export default function Logo({ lang, size = 'default' }: LogoProps) {
   const isSmall = size === 'small';
 
   return (
-    <Link href={`/${lang}`} className={`flex items-center ${isSmall ? 'gap-4' : 'gap-6'} group select-none`}>
-      <div className={`relative ${isSmall ? 'w-12 h-12' : 'w-16 h-16'} flex items-center justify-center`}>
+    <Link href={`/${lang}`} className={`flex items-center ${isSmall ? 'gap-4' : 'gap-3 sm:gap-6'} group select-none`}>
+      <div className={`relative ${isSmall ? 'w-12 h-12' : 'w-12 h-12 sm:w-16 sm:h-16'} flex items-center justify-center`}>
         {isSmall ? (
           <>
             <div className="absolute w-8 h-8 rounded bg-cyan-400/2 border border-cyan-400/10 -translate-x-3" />
@@ -39,7 +39,7 @@ export default function Logo({ lang, size = 'default' }: LogoProps) {
           NTO
         </span>
         <span
-          className={`${isSmall ? 'text-[10px] text-gray-600 group-hover:text-gray-500' : 'text-[12px] text-gray-400'} font-semibold tracking-[0.2em] uppercase mt-1.5 transition-colors duration-300`}
+          className={`${isSmall ? 'text-[10px] text-gray-600 group-hover:text-gray-500' : 'text-[12px] text-gray-400'} font-semibold tracking-[0.2em] uppercase whitespace-nowrap mt-1.5 transition-colors duration-300`}
         >
           it-solutions
         </span>
