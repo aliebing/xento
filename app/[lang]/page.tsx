@@ -25,8 +25,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <Teaser dict={dict.hero} />
         <Services dict={dict.services} />
         <Experience dict={dict.experience} />
-        <Technologies />
-        <About />
+        <Technologies dict={dict.technologies} />
+        <About dict={dict.about} />
         <Contact />
       </main>
 

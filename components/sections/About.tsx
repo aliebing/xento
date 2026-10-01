@@ -1,21 +1,7 @@
 import Image from "next/image";
+import type { Dictionary } from "@/lib/i18n/dictionaries";
 
-const features = [
-  {
-    title: 'IHK-Zertifiziert',
-    desc: 'Softwareentwicklung 2001 / 2003'
-  },
-  {
-    title: 'Architekturfokus',
-    desc: 'DDD, OOP, State-Machines, Workflows'
-  },
-  {
-    title: 'Flexibler Einsatz',
-    desc: 'Remote oder vor Ort im Raum Karlsruhe'
-  }
-];
-
-export default function About() {
+export default function About({ dict }: { dict: Dictionary["about"] }) {
   return (
     <section id="about" className="w-full bg-[#060b13] text-white py-20 px-6 relative overflow-hidden">
       {/* Subtiler Glow-Effekt im Hintergrund */}
@@ -29,7 +15,7 @@ export default function About() {
             <div className="relative w-[280px] h-[340px] md:w-[320px] md:h-[380px] overflow-hidden rounded-xl border border-gray-700/40">
                 <Image 
                   src="/images/profile_casual.jpg" 
-                  alt="Alexander Liebing"
+                  alt={dict.imageAlt}
                   fill
                   className="object-cover"
                   priority
@@ -41,31 +27,26 @@ export default function About() {
         {/* Rechte Spalte: Inhalt */}
         <div className="lg:col-span-8 space-y-6">
           <span className="inline-block px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-semibold rounded-md uppercase tracking-wider">
-            Das Gesicht hinter der Firma
+            {dict.badge}
           </span>
           
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-100">
-            Über Alexander Liebing
+            {dict.title}
           </h2>
 
           <div className="space-y-4 text-gray-400 text-sm md:text-base leading-relaxed max-w-3xl">
-            <p className="text-gray-200 font-medium">
-              Ich verstehe mich immer als leidenschaftlicher Softwarearchitekt und Fullstack-Entwickler mit starkem Fokus auf Robustheit, sauberen Code (Clean Code) und pragmatische Lösungen.
-            </p>
-            <p>
-              Seit meiner Ausbildung zum Fachinformatiker im Jahr 2003 und IHK-Zertifizierung als Softwareentwickler im Internet (2001) habe ich Systeme für namhafte Konzerne wie die EnBW (Powercloud) und die Lürssenwerft konzipiert und betreut.
-            </p>
-            <p>
-              Mit der Firmengründung verfolge ich das Ziel, mein Wissen und meine mehr als 20-jährige Erfahrung flexibel für Ihre anspruchsvollen Softwareprojekte einzubringen. Ob Sie zusätzliche Entwicklungspower (Symfony / Laravel), eine architektonische Beratung bei Legacy-Migrationen oder professionellen Support für den Systembetrieb suchen: Wir stehen an Ihrer Seite.
-            </p>
+            <p className="text-gray-200 font-medium">{dict.lead}</p>
+            {dict.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
 
           {/* Die 3 Feature-Boxen unten */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6">
-            {features.map((feat, idx) => (
-              <div key={idx} className="bg-[#0b111e]/30 border border-gray-800/40 rounded-xl p-5 backdrop-blur-sm">
+            {dict.features.map((feat) => (
+              <div key={feat.title} className="bg-[#0b111e]/30 border border-gray-800/40 rounded-xl p-5 backdrop-blur-sm">
                 <h4 className="text-cyan-400 text-sm font-bold mb-1">{feat.title}</h4>
-                <p className="text-gray-400 text-xs leading-relaxed">{feat.desc}</p>
+                <p className="text-gray-400 text-xs leading-relaxed">{feat.description}</p>
               </div>
             ))}
           </div>
