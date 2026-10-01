@@ -23,8 +23,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
       {/* Hauptinhalt mit Abstand für die Navigation */}
       <main className="pt-20">
-        <Teaser />
-        <Services />
+        <Teaser dict={dict.hero} />
+        <Services dict={dict.services} />
         <Projects />
         <Technologies />
         <References />
