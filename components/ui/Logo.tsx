@@ -1,15 +1,17 @@
 import Link from 'next/link';
+import type { Locale } from '@/lib/i18n/config';
 
 interface LogoProps {
+  lang: Locale;
   /** 'default' für die Hauptnavigation, 'small' für z. B. den Footer. */
   size?: 'default' | 'small';
 }
 
-export default function Logo({ size = 'default' }: LogoProps) {
+export default function Logo({ lang, size = 'default' }: LogoProps) {
   const isSmall = size === 'small';
 
   return (
-    <Link href="/" className={`flex items-center ${isSmall ? 'gap-4' : 'gap-6'} group select-none`}>
+    <Link href={`/${lang}`} className={`flex items-center ${isSmall ? 'gap-4' : 'gap-6'} group select-none`}>
       <div className={`relative ${isSmall ? 'w-12 h-12' : 'w-16 h-16'} flex items-center justify-center`}>
         {isSmall ? (
           <>

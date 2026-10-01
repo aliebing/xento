@@ -3,8 +3,11 @@ import Navbar from '@/components/ui/NavBar';
 import Footer from '@/components/ui/Footer';
 import { fetchRecentContactMessages, isSupabaseConfigured } from '@/lib/supabase';
 import type { ContactMessage } from '@/lib/supabase';
+import { getDictionary } from '@/lib/i18n/dictionaries';
 
 export default async function AdminPage() {
+  const dict = await getDictionary('de');
+
   // Server-side fetch using service role key (never exposed to client)
   let entries: ContactMessage[] = [];
   if (isSupabaseConfigured()) {
@@ -18,7 +21,7 @@ export default async function AdminPage() {
 
   return (
     <div className="bg-[#060b13] min-h-screen text-white">
-      <Navbar minimal />
+      <Navbar minimal hideSwitcher lang="de" dict={dict.nav} />
       <main className="pt-28 pb-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10 rounded-3xl border border-white/10 bg-[#0d1420]/80 p-8 shadow-2xl shadow-black/20">
@@ -34,7 +37,7 @@ export default async function AdminPage() {
           <ContactDashboard initialEntries={entries} />
         </div>
       </main>
-      <Footer />
+      <Footer lang="de" dict={dict.footer} />
     </div>
   );
 }
