@@ -16,7 +16,7 @@ export default function Teaser() {
             Professional IT Services
           </span>
           
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tigsht">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
             Ihr Partner für <br />
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Entwicklung & Beratung
@@ -41,7 +41,7 @@ export default function Teaser() {
 
         {/* Rechte Spalte: Profil-Karte */}
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
-          <div className="w-full max-w-sm bg-gradient-to-b from-[#2328339c] to-[#0a1125bd] border border-gray-800/60 rounded-2xl p-8 flex flex-col items-center text-center srelative backdrop-blur-sm">
+          <div className="w-full max-w-sm bg-gradient-to-b from-[#2328339c] to-[#0a1125bd] border border-gray-800/60 rounded-2xl p-8 flex flex-col items-center text-center relative backdrop-blur-sm">
             
             {/* Profilbild-Container */}
             <div className="relative w-45 h-45 rounded-full overflow-hidden border-2 border-cyan-500/30 p-1 mb-4">

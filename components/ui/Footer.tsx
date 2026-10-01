@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Logo from "./LogoSmall";
+import Logo from "./Logo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         
         {/* Logo-Branding links */}
-        <Logo />
+        <Logo size="small" />
 
         {/* Copyright Mitte */}
         <div>

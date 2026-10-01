@@ -17,11 +17,28 @@ export default function ContactDashboard({ initialEntries }: { initialEntries?: 
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Refresh will reload the page so data is fetched server-side again (keeps credentials on server)
-  const refresh = () => {
+  // Lädt die Daten über den (Basic-Auth-geschützten) GET-Endpoint neu, ohne
+  // die komplette Seite neu zu laden. Der Browser sendet die beim initialen
+  // Seitenaufruf zwischengespeicherten Basic-Auth-Credentials automatisch mit,
+  // solange die Anfrage an denselben Origin geht.
+  const refresh = async () => {
     setIsLoading(true);
     setError(null);
-    window.location.reload();
+    try {
+      const response = await fetch('/api/contact', { method: 'GET' });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error ?? 'Fehler beim Laden der Kontaktanfragen.');
+      }
+
+      setEntries(result.data ?? []);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : 'Etwas ist schiefgelaufen.';
+      setError(message);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -39,17 +56,19 @@ export default function ContactDashboard({ initialEntries }: { initialEntries?: 
           disabled={isLoading}
           className="inline-flex items-center justify-center rounded-full bg-cyan-500 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-cyan-400 disabled:opacity-50"
         >
-          Aktualisieren
+          {isLoading ? 'Lädt...' : 'Aktualisieren'}
         </button>
       </div>
 
-      {isLoading ? (
+      {error ? (
+        <div className="mb-5 rounded-2xl border border-red-500/30 bg-[#1d1313] p-4 text-center text-sm text-red-200">
+          {error}
+        </div>
+      ) : null}
+
+      {isLoading && entries.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-cyan-500/40 bg-[#060b13] p-8 text-center text-gray-300">
           Lade Kontaktanfragen...
-        </div>
-      ) : error ? (
-        <div className="rounded-2xl border border-red-500/30 bg-[#1d1313] p-8 text-center text-red-200">
-          {error}
         </div>
       ) : entries.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-gray-500/40 bg-[#060b13] p-8 text-center text-gray-300">
