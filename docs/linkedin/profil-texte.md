@@ -73,7 +73,7 @@ White-Label-Lösungen, Magento-Module und Plattform-Upgrades (1.5 → 1.7).
 **Turing College** – AI Engineer · 08/2026 – 11/2026
 LLM-Anwendungen, RAG, Agenten mit LangGraph, Evaluation und Absicherung von KI-Systemen. Abschlussprojekte: HikeSense, CineSense.
 
-**IHK** – Fachinformatiker Anwendungsentwicklung · 2003
+**IHK** – Fachinformatiker · 2003
 **IHK** – Softwareentwickler im Internet (Zertifikat) · 2001
 
 ### Lizenzen & Zertifikate

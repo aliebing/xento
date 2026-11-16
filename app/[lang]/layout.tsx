@@ -3,10 +3,9 @@ import { notFound } from 'next/navigation';
 import { geistMono, geistSans } from '@/lib/fonts';
 import { hasLocale, locales } from '@/lib/i18n/config';
 import { getDictionary } from '@/lib/i18n/dictionaries';
+import { siteOrigin } from '@/lib/siteUrl';
 import '../globals.css';
 
-// Für absolute URLs in hreflang/OpenGraph. In Vercel auf die echte Domain setzen.
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://xento-phi.vercel.app';
 
 export const dynamicParams = false;
 
@@ -24,7 +23,7 @@ export async function generateMetadata({
   const { meta } = await getDictionary(lang);
 
   return {
-    metadataBase: new URL(siteUrl),
+    metadataBase: siteOrigin(),
     title: meta.title,
     description: meta.description,
     alternates: {
