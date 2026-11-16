@@ -33,7 +33,7 @@ Ausgewählte Projekte: Kunden- und Vertragsportal eines Energiedienstleisters (6
 AI Engineering: 2026 habe ich die Weiterbildung zum AI Engineer am Turing College abgeschlossen. Dabei sind zwei Anwendungen entstanden, die live laufen und bewusst zwei gegensätzliche Ansätze zeigen:
 ▸ HikeSense (hikesense.de) – KI-Wanderplaner, Workflow-first: LangGraph-Graph mit festen Schritten, PostGIS-Suche, RAG-Wissensindex und Grounding-Prüfung jeder Zahl.
 ▸ CineSense (cinesense.de) – Filme nach Stimmung, Agent-first: ReAct-Agent-Loop mit LangGraph und RAG-Suche über Filmhandlungen.
-Stack: Next.js, Python, FastAPI, LangGraph, Claude Haiku 5.5.
+Stack: Next.js, Python, FastAPI, LangGraph · LLMs: GPT-4o mini (HikeSense), Claude Haiku 5.5 (CineSense).
 
 Damit verbinde ich robuste Backend-Erfahrung mit der Integration von LLMs in bestehende Systeme.
 
@@ -127,7 +127,7 @@ Selected projects: customer and contract portal for an energy services provider 
 AI engineering: in 2026 I completed the AI Engineer programme at Turing College. It produced two live applications that deliberately show two opposite approaches:
 ▸ HikeSense (hikesense.de) – AI hiking planner, workflow-first: a LangGraph graph with fixed steps, PostGIS search, a RAG knowledge index and a grounding check on every number.
 ▸ CineSense (cinesense.de) – films by mood, agent-first: a ReAct agent loop with LangGraph and RAG search over film plots.
-Stack: Next.js, Python, FastAPI, LangGraph, Claude Haiku 5.5.
+Stack: Next.js, Python, FastAPI, LangGraph · LLMs: GPT-4o mini (HikeSense), Claude Haiku 5.5 (CineSense).
 
 This lets me combine solid backend experience with integrating LLMs into existing systems.
 

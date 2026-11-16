@@ -156,7 +156,7 @@
           ],
           "liveCta": "View live →",
           "repoCta": "GitHub",
-          "tags": ["Next.js", "Python", "FastAPI", "LangGraph", "RAG", "PostGIS", "Supabase", "Claude Haiku 5.5"]
+          "tags": ["Next.js", "Python", "FastAPI", "LangGraph", "RAG", "PostGIS", "Supabase", "GPT-4o mini"]
         },
         {
           "badge": "Turing College project",
