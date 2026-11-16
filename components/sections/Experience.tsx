@@ -1,5 +1,6 @@
 import type { Dictionary } from '@/lib/i18n/dictionaries';
-import OwnProjectCard from './OwnProjectCard';
+import TrainingProjectCard from './TrainingProjectCard';
+import { TRAINING_PROJECTS } from '@/lib/links';
 
 export default function Experience({ dict }: { dict: Dictionary['experience'] }) {
   return (
@@ -19,6 +20,39 @@ export default function Experience({ dict }: { dict: Dictionary['experience'] })
 
         {/* Projekt-Liste mit Zeitleisten-Effekt */}
         <div className="relative border-l border-gray-800/60 pl-6 md:pl-8 space-y-12">
+
+          {/* Weiterbildung AI Engineer (neuester Eintrag zuerst) */}
+          <div className="relative">
+            <div className="absolute -left-[31px] md:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#060b13] border-2 border-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.6)]" />
+
+            <div className="w-full bg-[#0b111e]/50 border border-gray-800/40 rounded-xl p-6 md:p-8 backdrop-blur-sm shadow-xl mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-gray-800/60 pb-4 mb-5">
+                <span className="text-xs font-semibold text-cyan-400 bg-cyan-950/40 border border-cyan-800/30 px-2.5 py-1 rounded">
+                  {dict.training.period}
+                </span>
+                <span className="text-xs text-gray-500 font-medium">
+                  {dict.training.badge}
+                </span>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-100 mb-3">
+                {dict.training.title}
+              </h3>
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed">
+                {dict.training.description}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {dict.training.projects.map((project, i) => (
+                <TrainingProjectCard
+                  key={project.title}
+                  project={project}
+                  highlightsLabel={dict.training.highlightsLabel}
+                  {...TRAINING_PROJECTS[i]}
+                />
+              ))}
+            </div>
+          </div>
 
           {dict.projects.map((project) => (
             <div key={project.title} className="relative group">
@@ -77,11 +111,6 @@ export default function Experience({ dict }: { dict: Dictionary['experience'] })
             </div>
           ))}
 
-        </div>
-
-        {/* Eigenes Projekt (vorher eigene Sektion "Referenzen") */}
-        <div className="mt-16">
-          <OwnProjectCard dict={dict.ownProject} />
         </div>
 
       </div>

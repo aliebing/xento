@@ -41,8 +41,8 @@ export default function About({ dict }: { dict: Dictionary["about"] }) {
             ))}
           </div>
 
-          {/* Die 3 Feature-Boxen unten */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6">
+          {/* Feature-Boxen unten (2x2) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
             {dict.features.map((feat) => (
               <div key={feat.title} className="bg-[#0b111e]/30 border border-gray-800/40 rounded-xl p-5 backdrop-blur-sm">
                 <h4 className="text-cyan-400 text-sm font-bold mb-1">{feat.title}</h4>

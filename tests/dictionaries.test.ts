@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { TRAINING_PROJECTS } from '../lib/links';
 
 type Json = string | number | boolean | null | Json[] | { [key: string]: Json };
 
@@ -32,7 +33,7 @@ function strings(value: Json): string[] {
 
 type Dict = {
   services: { items: unknown[] };
-  experience: { projects: { tags: string[] }[]; ownProject: { tags: string[] } };
+  experience: { projects: { tags: string[] }[]; training: { projects: { tags: string[] }[] } };
   technologies: { furtherItems: string[] };
   about: { features: unknown[] };
   footer: { copyright: string };
@@ -54,7 +55,8 @@ test('list lengths match the components', () => {
   for (const dict of [en, de] as unknown as Dict[]) {
     assert.equal(dict.services.items.length, 3);
     assert.equal(dict.experience.projects.length, 5);
-    assert.equal(dict.about.features.length, 3);
+    assert.equal(dict.experience.training.projects.length, TRAINING_PROJECTS.length);
+    assert.equal(dict.about.features.length, 4);
   }
 });
 
@@ -65,7 +67,10 @@ test('technology names are language-neutral', () => {
     a.experience.projects.map((p) => p.tags),
     b.experience.projects.map((p) => p.tags),
   );
-  assert.deepEqual(a.experience.ownProject.tags, b.experience.ownProject.tags);
+  assert.deepEqual(
+    a.experience.training.projects.map((p) => p.tags),
+    b.experience.training.projects.map((p) => p.tags),
+  );
   assert.deepEqual(a.technologies.furtherItems, b.technologies.furtherItems);
 });
 

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Logo from './Logo';
 import type { Locale } from '@/lib/i18n/config';
 import type { Dictionary } from '@/lib/i18n/dictionaries';
+import { LINKEDIN_URL } from '@/lib/links';
 
 interface FooterProps {
   lang: Locale;
@@ -23,6 +24,7 @@ export default function Footer({ lang, dict }: FooterProps) {
 
         {/* Rechtliches rechts */}
         <div className="flex items-center gap-6">
+          <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">{dict.linkedin}</a>
           <Link href={`/${lang}/impressum`} className="hover:text-gray-300 transition-colors">{dict.impressum}</Link>
           <Link href={`/${lang}/datenschutz`} className="hover:text-gray-300 transition-colors">{dict.privacy}</Link>
         </div>

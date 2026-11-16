@@ -136,14 +136,43 @@
         "tags": ["Magento", "jQuery", "PHP", "Frontend-Widgets"]
       }
     ],
-    "ownProject": {
-      "badge": "Eigenes Projekt",
-      "title": "AI Movie Finder",
-      "descriptionBefore": "Ein intelligentes Movie-Recommendation-System mit ",
-      "descriptionHighlight": "KI-gestützter Analyse",
-      "descriptionAfter": " Ihrer Vorlieben. Der Algorithmus kombiniert gewichtete Genre-Präferenzen mit IMDB-Ratings und Qualitätsmetriken, um personalisierte Filmempfehlungen zu generieren, die perfekt zu Ihrem Geschmack passen.",
-      "tags": ["Python", "streamlit", "sqlite"],
-      "cta": "Projekt ansehen →"
+    "training": {
+      "badge": "Weiterbildung",
+      "period": "08/2026 – 11/2026",
+      "title": "AI Engineer – Turing College",
+      "description": "Berufsbegleitende Weiterbildung zum AI Engineer mit Abschlusszertifikat: LLM-Anwendungen, Retrieval-Augmented Generation (RAG), Agenten mit LangGraph sowie Evaluation und Absicherung von KI-Systemen. Entstanden sind zwei live laufende Anwendungen – bewusst mit zwei gegensätzlichen Architekturansätzen.",
+      "highlightsLabel": "Technische Highlights:",
+      "projects": [
+        {
+          "badge": "Turing College Projekt",
+          "title": "HikeSense – KI-Wanderplaner",
+          "approach": "Workflow-first",
+          "description": "Wanderplaner für Schwarzwald, Bodensee und Pfälzerwald per KI-Chat: Tages- und Mehrtagestouren auf acht Fernwanderwegen mit Unterkünften, Gehzeiten und Wetter. Der Code entscheidet, das Modell formuliert – jede Route kommt aus der Datenbank, jede Zahl in der Antwort wird gegen die Tool-Ergebnisse geprüft.",
+          "highlights": [
+            "LangGraph-Workflow mit festen Schritten: Guard, Structured Output, Suche, Antwort und Grounding-Prüfung.",
+            "PostGIS-Suche mit nachvollziehbarer ✓/✗-Prüfung jeder Bedingung und Beinahe-Treffern.",
+            "RAG-Wissensindex (ChromaDB + BM25) – jede Antwort mit Quelle und Lizenz.",
+            "Datenpipeline: aus 4.014 OSM-Relationen werden 577 geprüfte Tagestouren."
+          ],
+          "liveCta": "Live ansehen →",
+          "repoCta": "GitHub",
+          "tags": ["Next.js", "Python", "FastAPI", "LangGraph", "RAG", "PostGIS", "Supabase", "Claude Haiku 5.5"]
+        },
+        {
+          "badge": "Turing College Projekt",
+          "title": "CineSense – Filme nach Stimmung",
+          "approach": "Agent-first",
+          "description": "Film-Finder, der nicht nach Titeln, sondern nach Stimmung sucht – etwa „wie Interstellar, nur kürzer“. Ein ReAct-Agent entscheidet selbst, welche Werkzeuge er in welcher Reihenfolge nutzt: der agentische Gegenentwurf zum festen Workflow von HikeSense.",
+          "highlights": [
+            "ReAct-Agent-Loop mit LangGraph: Das Modell plant, ruft Tools auf und bewertet Zwischenergebnisse.",
+            "RAG-Suche über Filmhandlungen (search_plot) für inhaltliche und stimmungsbasierte Treffer.",
+            "Stimmungs-Tags, Schnellfilter (Kino, Streaming, kein Horror) und kuratierte Genre-Welten."
+          ],
+          "liveCta": "Live ansehen →",
+          "repoCta": "GitHub",
+          "tags": ["Next.js", "Python", "LangGraph", "ReAct Agent", "RAG", "Claude Haiku 5.5"]
+        }
+      ]
     }
   },
   "technologies": {
@@ -161,12 +190,14 @@
     "lead": "Ich bin leidenschaftlicher Softwarearchitekt und Fullstack-Entwickler mit starkem Fokus auf Robustheit, sauberen Code (Clean Code) und pragmatische Lösungen.",
     "paragraphs": [
       "Seit meiner IHK-Zertifizierung als Softwareentwickler im Internet (2001) und meiner Ausbildung zum Fachinformatiker (2003) habe ich Systeme für namhafte Konzerne wie die EnBW (Powercloud) und die Lürssenwerft konzipiert und betreut.",
-      "Mit Xento bündele ich meine langjährige Erfahrung aus Enterprise- und KMU-Projekten unter einer eigenen Marke. Ob Sie zusätzliche Entwicklungskapazität (Symfony / Laravel), architektonische Beratung bei Legacy-Migrationen oder professionellen Support für den Systembetrieb suchen: Ich arbeite direkt mit Ihnen zusammen."
+      "Mit Xento bündele ich meine langjährige Erfahrung aus Enterprise- und KMU-Projekten unter einer eigenen Marke. Ob Sie zusätzliche Entwicklungskapazität (Symfony / Laravel), architektonische Beratung bei Legacy-Migrationen oder professionellen Support für den Systembetrieb suchen: Ich arbeite direkt mit Ihnen zusammen.",
+      "2026 habe ich meine Backend-Erfahrung um AI Engineering erweitert: In der Weiterbildung zum AI Engineer am Turing College habe ich KI-Anwendungen mit RAG und Agenten (LangGraph) entwickelt, die live im Einsatz sind – HikeSense und CineSense."
     ],
     "features": [
       { "title": "IHK-Zertifiziert", "description": "Softwareentwicklung 2001 / 2003" },
       { "title": "Architekturfokus", "description": "DDD, OOP, State-Machines, Workflows" },
-      { "title": "Flexibler Einsatz", "description": "Remote oder vor Ort im Raum Karlsruhe" }
+      { "title": "Flexibler Einsatz", "description": "Remote oder vor Ort im Raum Karlsruhe" },
+      { "title": "AI Engineer", "description": "Turing College 2026 · LLM, RAG, Agenten" }
     ]
   },
   "contact": {
@@ -206,12 +237,14 @@
       "server_not_configured": "Das Kontaktformular ist derzeit nicht verfügbar. Bitte schreiben Sie mir direkt eine E-Mail.",
       "internal": "Etwas ist schiefgelaufen. Bitte versuchen Sie es später erneut.",
       "network": "Netzwerkfehler. Bitte prüfen Sie Ihre Verbindung und versuchen Sie es erneut."
-    }
+    },
+    "linkedinLabel": "LinkedIn"
   },
   "footer": {
     "copyright": "© {year} Xento IT-Solutions. Alle Rechte vorbehalten.",
     "impressum": "Impressum",
-    "privacy": "Datenschutz"
+    "privacy": "Datenschutz",
+    "linkedin": "LinkedIn"
   },
   "legal": {
     "notice": "Aus rechtlichen Gründen nur auf Deutsch verfügbar.",

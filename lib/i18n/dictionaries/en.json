@@ -136,14 +136,43 @@
         "tags": ["Magento", "jQuery", "PHP", "Frontend-Widgets"]
       }
     ],
-    "ownProject": {
-      "badge": "Own project",
-      "title": "AI Movie Finder",
-      "descriptionBefore": "An intelligent movie recommendation system with ",
-      "descriptionHighlight": "AI-assisted analysis",
-      "descriptionAfter": " of your preferences. The algorithm combines weighted genre preferences with IMDB ratings and quality metrics to generate personalised recommendations that fit your taste perfectly.",
-      "tags": ["Python", "streamlit", "sqlite"],
-      "cta": "Visit project →"
+    "training": {
+      "badge": "Further education",
+      "period": "08/2026 – 11/2026",
+      "title": "AI Engineer – Turing College",
+      "description": "Part-time AI Engineer programme with a final certificate: LLM applications, retrieval-augmented generation (RAG), agents with LangGraph, and evaluating and securing AI systems. The result is two applications running live – deliberately built on two opposite architectural approaches.",
+      "highlightsLabel": "Technical highlights:",
+      "projects": [
+        {
+          "badge": "Turing College project",
+          "title": "HikeSense – AI hiking planner",
+          "approach": "Workflow-first",
+          "description": "A hiking planner for the Black Forest, Lake Constance and the Palatinate Forest, used through an AI chat: day hikes and multi-day tours on eight long-distance trails with places to stay, walking times and weather. The code decides, the model words it – every route comes from the database, and every number in the answer is checked against the tool results.",
+          "highlights": [
+            "LangGraph workflow with fixed steps: guard, structured output, search, answer and grounding check.",
+            "PostGIS search with a transparent ✓/✗ check for every condition, plus near misses.",
+            "RAG knowledge index (ChromaDB + BM25) – every answer with source and licence.",
+            "Data pipeline: 4,014 OSM relations turned into 577 verified day hikes."
+          ],
+          "liveCta": "View live →",
+          "repoCta": "GitHub",
+          "tags": ["Next.js", "Python", "FastAPI", "LangGraph", "RAG", "PostGIS", "Supabase", "Claude Haiku 5.5"]
+        },
+        {
+          "badge": "Turing College project",
+          "title": "CineSense – films by mood",
+          "approach": "Agent-first",
+          "description": "A film finder that searches by mood instead of title – for example “like Interstellar, but shorter”. A ReAct agent decides on its own which tools to use and in which order: the agentic counterpart to the fixed workflow of HikeSense.",
+          "highlights": [
+            "ReAct agent loop with LangGraph: the model plans, calls tools and evaluates intermediate results.",
+            "RAG search over film plots (search_plot) for content- and mood-based matches.",
+            "Mood tags, quick filters (cinema, streaming, no horror) and curated genre worlds."
+          ],
+          "liveCta": "View live →",
+          "repoCta": "GitHub",
+          "tags": ["Next.js", "Python", "LangGraph", "ReAct Agent", "RAG", "Claude Haiku 5.5"]
+        }
+      ]
     }
   },
   "technologies": {
@@ -161,12 +190,14 @@
     "lead": "I am a passionate software architect and full-stack developer with a strong focus on robustness, clean code and pragmatic solutions.",
     "paragraphs": [
       "Since my IHK certification as an internet software developer (2001) and my apprenticeship as an IT specialist (2003), I have designed and maintained systems for well-known companies such as EnBW (Powercloud) and Lürssen shipyard.",
-      "With Xento I bundle my many years of experience from enterprise and SME projects under my own brand. Whether you need additional development capacity (Symfony / Laravel), architectural advice on legacy migrations or professional support for system operations: I work with you directly."
+      "With Xento I bundle my many years of experience from enterprise and SME projects under my own brand. Whether you need additional development capacity (Symfony / Laravel), architectural advice on legacy migrations or professional support for system operations: I work with you directly.",
+      "In 2026 I extended my backend experience with AI engineering: in the AI Engineer programme at Turing College I built AI applications with RAG and agents (LangGraph) that are running live – HikeSense and CineSense."
     ],
     "features": [
       { "title": "IHK certified", "description": "Software development 2001 / 2003" },
       { "title": "Architecture focus", "description": "DDD, OOP, state machines, workflows" },
-      { "title": "Flexible deployment", "description": "Remote or on site in the Karlsruhe area" }
+      { "title": "Flexible deployment", "description": "Remote or on site in the Karlsruhe area" },
+      { "title": "AI Engineer", "description": "Turing College 2026 · LLM, RAG, agents" }
     ]
   },
   "contact": {
@@ -206,12 +237,14 @@
       "server_not_configured": "The contact form is currently unavailable. Please email me directly.",
       "internal": "Something went wrong. Please try again later.",
       "network": "Network error. Please check your connection and try again."
-    }
+    },
+    "linkedinLabel": "LinkedIn"
   },
   "footer": {
     "copyright": "© {year} Xento IT-Solutions. All rights reserved.",
     "impressum": "Legal notice",
-    "privacy": "Privacy policy"
+    "privacy": "Privacy policy",
+    "linkedin": "LinkedIn"
   },
   "legal": {
     "notice": "For legal reasons, this page is only available in German.",
