@@ -16,7 +16,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
   const dict = await getDictionary(lang);
 
   return (
-    <div className="bg-[#0b1220] min-h-screen">
+    <div className="bg-[#090d15] min-h-screen">
       {/* Fixierte, halbtransparente Navigation */}
       <Navbar lang={lang} dict={dict.nav} />
 

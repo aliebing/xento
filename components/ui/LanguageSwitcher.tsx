@@ -49,7 +49,7 @@ export default function LanguageSwitcher({ lang, label }: LanguageSwitcherProps)
   return (
     <nav
       aria-label={label}
-      className="flex items-center rounded-full border border-gray-700/60 bg-[#141e32]/60 p-0.5 text-xs font-semibold"
+      className="flex items-center rounded-full border border-zinc-700/60 bg-[#101622]/60 p-0.5 text-xs font-semibold"
     >
       {locales.map((locale) => {
         const active = locale === lang;
@@ -63,7 +63,7 @@ export default function LanguageSwitcher({ lang, label }: LanguageSwitcherProps)
             title={name}
             aria-current={active ? "true" : undefined}
             className={`flex items-center gap-1.5 rounded-full px-2 py-1.5 transition-colors sm:px-2.5 ${
-              active ? "bg-cyan-500/20 text-white" : "text-gray-300 hover:text-white"
+              active ? "bg-cyan-500/20 text-white" : "text-zinc-300 hover:text-white"
             }`}
           >
             <Flag locale={locale} />

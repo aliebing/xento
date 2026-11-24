@@ -30,16 +30,16 @@ export default function Logo({ lang, size = 'default' }: LogoProps) {
 
       <div className="flex flex-col">
         <span
-          className={`${isSmall ? 'text-2xl text-gray-300 group-hover:text-gray-200' : 'text-3xl text-white'} font-black tracking-wide leading-none transition-colors duration-300`}
+          className={`${isSmall ? 'text-2xl text-zinc-300 group-hover:text-zinc-200' : 'text-3xl text-white'} font-black tracking-wide leading-none transition-colors duration-300`}
         >
           X
-          <span className={isSmall ? 'text-slate-400 font-extrabold transition-colors duration-300 group-hover:text-cyan-500/80' : 'text-cyan-400'}>
+          <span className={isSmall ? 'text-slate-400 font-semibold transition-colors duration-300 group-hover:text-cyan-500/80' : 'text-cyan-400'}>
             E
           </span>
           NTO
         </span>
         <span
-          className={`${isSmall ? 'text-[10px] text-gray-600 group-hover:text-gray-400' : 'text-[12px] text-gray-300'} font-semibold tracking-[0.2em] uppercase whitespace-nowrap mt-1.5 transition-colors duration-300`}
+          className={`${isSmall ? 'text-[10px] text-zinc-600 group-hover:text-zinc-400' : 'text-[12px] text-zinc-300'} font-semibold tracking-[0.2em] uppercase whitespace-nowrap mt-1.5 transition-colors duration-300`}
         >
           it-solutions
         </span>

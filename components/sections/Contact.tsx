@@ -58,18 +58,18 @@ export default function Contact({ lang, dict }: ContactProps) {
   };
 
   return (
-    <section id="contact" className="w-full bg-[#101a2b] text-white py-30 px-6 relative overflow-hidden border-t border-b border-gray-700/70">
+    <section id="contact" className="w-full bg-[#0c111a] text-white py-30 px-6 relative overflow-hidden border-t border-b border-zinc-700/70">
       {/* Subtiler Hintergrund-Glow */}
 
       <div className="max-w-7xl mx-auto relative z-10 w-full">
         
         {/* Sektions-Header */}
         <div className="text-center space-y-4 mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">
             {dict.title}
           </h2>
-          <div className="w-12 h-1 bg-cyan-500 mx-auto rounded-full mt-2"></div>
-          <p className="text-gray-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed pt-2">
+          <div className="w-12 h-1 bg-amber-300 mx-auto rounded-full mt-2"></div>
+          <p className="text-zinc-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed pt-2">
             {dict.intro}
           </p>
         </div>
@@ -78,10 +78,10 @@ export default function Contact({ lang, dict }: ContactProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* LINKSE SPALTE: Kontaktdaten */}
-          <div className="lg:col-span-4 bg-[#141e32]/40 border border-gray-700/60 rounded-2xl p-8 backdrop-blur-sm space-y-8 h-full flex flex-col justify-between">
+          <div className="lg:col-span-4 bg-[#101622]/40 border border-zinc-800/40 rounded-2xl p-8 backdrop-blur-sm space-y-8 h-full flex flex-col justify-between">
             <div>
-              <h3 className="text-xl font-bold text-gray-100 mb-3">{dict.detailsTitle}</h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <h3 className="text-lg font-semibold text-zinc-100 mb-3">{dict.detailsTitle}</h3>
+              <p className="text-zinc-300 text-sm leading-relaxed">
                 {dict.detailsText}
               </p>
             </div>
@@ -89,54 +89,54 @@ export default function Contact({ lang, dict }: ContactProps) {
             <div className="space-y-6">
               {/* E-Mail */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400/80 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">{dict.emailLabel}</span>
-                  <a href="mailto:aliebing@gmx.de" className="text-sm font-semibold text-gray-200 hover:text-cyan-400 transition-colors">aliebing@gmx.de</a>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-400 block">{dict.emailLabel}</span>
+                  <a href="mailto:aliebing@gmx.de" className="text-sm font-semibold text-zinc-200 hover:text-cyan-400/80 transition-colors">aliebing@gmx.de</a>
                 </div>
               </div>
 
               {/* Telefon */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400/80 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">{dict.phoneLabel}</span>
-                  <a href="tel:+491629405960" className="text-sm font-semibold text-gray-200 hover:text-cyan-400 transition-colors">+49 162 9405960</a>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-400 block">{dict.phoneLabel}</span>
+                  <a href="tel:+491629405960" className="text-sm font-semibold text-zinc-200 hover:text-cyan-400/80 transition-colors">+49 162 9405960</a>
                 </div>
               </div>
 
               {/* LinkedIn */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400/80 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">{dict.linkedinLabel}</span>
-                  <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-gray-200 hover:text-cyan-400 transition-colors">Alexander Liebing</a>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-400 block">{dict.linkedinLabel}</span>
+                  <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-zinc-200 hover:text-cyan-400/80 transition-colors">Alexander Liebing</a>
                 </div>
               </div>
 
               {/* Standort */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
+                <div className="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400/80 flex items-center justify-center flex-shrink-0 border border-cyan-500/20">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">{dict.locationLabel}</span>
-                  <p className="text-sm font-semibold text-gray-200 leading-relaxed">{dict.locationValue}</p>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-zinc-400 block">{dict.locationLabel}</span>
+                  <p className="text-sm font-semibold text-zinc-200 leading-relaxed">{dict.locationValue}</p>
                 </div>
               </div>
             </div>
@@ -149,28 +149,28 @@ export default function Contact({ lang, dict }: ContactProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Name */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-gray-300">{dict.form.name}</label>
+                <label className="text-xs font-semibold text-zinc-300">{dict.form.name}</label>
                 <input 
                   type="text" 
                   name="name" 
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-[#141e32]/60 border border-gray-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
+                  className="w-full bg-[#101622]/60 border border-zinc-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-zinc-200 outline-none transition-colors placeholder-zinc-600"
                   placeholder={dict.form.namePlaceholder}
                 />
               </div>
               
               {/* E-Mail */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-gray-300">{dict.form.email}</label>
+                <label className="text-xs font-semibold text-zinc-300">{dict.form.email}</label>
                 <input 
                   type="email" 
                   name="email" 
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-[#141e32]/60 border border-gray-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
+                  className="w-full bg-[#101622]/60 border border-zinc-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-zinc-200 outline-none transition-colors placeholder-zinc-600"
                   placeholder={dict.form.emailPlaceholder}
                 />
               </div>
@@ -179,50 +179,50 @@ export default function Contact({ lang, dict }: ContactProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Firma */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-gray-300">{dict.form.company}</label>
+                <label className="text-xs font-semibold text-zinc-300">{dict.form.company}</label>
                 <input 
                   type="text" 
                   name="company" 
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full bg-[#141e32]/60 border border-gray-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
+                  className="w-full bg-[#101622]/60 border border-zinc-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-zinc-200 outline-none transition-colors placeholder-zinc-600"
                   placeholder={dict.form.companyPlaceholder}
                 />
               </div>
               
               {/* Gewünschte Dienstleistung Dropdown */}
               <div className="space-y-2">
-                <label className="text-xs font-semibold text-gray-300">{dict.form.service}</label>
+                <label className="text-xs font-semibold text-zinc-300">{dict.form.service}</label>
                 <select 
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full bg-[#141e32]/60 border border-gray-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors appearance-none cursor-pointer"
+                  className="w-full bg-[#101622]/60 border border-zinc-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-zinc-200 outline-none transition-colors appearance-none cursor-pointer"
                   style={{ backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center', backgroundSize: '16px' }}
                 >
-                  <option value="development" className="bg-[#0b1220]">{dict.form.serviceOptions.development}</option>
-                  <option value="architecture" className="bg-[#0b1220]">{dict.form.serviceOptions.architecture}</option>
-                  <option value="support" className="bg-[#0b1220]">{dict.form.serviceOptions.support}</option>
+                  <option value="development" className="bg-[#090d15]">{dict.form.serviceOptions.development}</option>
+                  <option value="architecture" className="bg-[#090d15]">{dict.form.serviceOptions.architecture}</option>
+                  <option value="support" className="bg-[#090d15]">{dict.form.serviceOptions.support}</option>
                 </select>
               </div>
             </div>
 
             {/* Nachricht / Details */}
             <div className="space-y-2">
-              <label className="text-xs font-semibold text-gray-300">{dict.form.message}</label>
+              <label className="text-xs font-semibold text-zinc-300">{dict.form.message}</label>
               <textarea 
                 name="message" 
                 required
                 rows={6}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full bg-[#141e32]/60 border border-gray-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600 resize-none"
+                className="w-full bg-[#101622]/60 border border-zinc-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-zinc-200 outline-none transition-colors placeholder-zinc-600 resize-none"
                 placeholder={dict.form.messagePlaceholder}
               ></textarea>
             </div>
 
             {/* Statusmeldungen */}
-            {status.loading && <p className="text-sm text-gray-300">{dict.form.sending}</p>}
+            {status.loading && <p className="text-sm text-zinc-300">{dict.form.sending}</p>}
             {status.success && <p className="text-sm text-green-500">{status.success}</p>}
             {status.error && <p className="text-sm text-red-500">{status.error}</p>}
             </div>
@@ -232,7 +232,7 @@ export default function Contact({ lang, dict }: ContactProps) {
               <button 
                 type="submit" 
                 disabled={status.loading}
-                className={`w-full px-6 py-4 font-semibold text-white bg-cyan-600 hover:bg-cyan-500 rounded-lg transition-all duration-200 ${status.loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                className={`w-full px-6 py-4 font-semibold text-white bg-cyan-700 hover:bg-cyan-600 rounded-lg transition-all duration-200 ${status.loading ? 'opacity-50 cursor-not-allowed' : ''}`}
               >           
                 {dict.form.submit}      
               </button>
