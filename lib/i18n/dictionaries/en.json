@@ -17,10 +17,10 @@
     "languageLabel": "Language"
   },
   "hero": {
-    "eyebrow": "Software Development & IT Consulting · Karlsruhe & Remote",
+    "eyebrow": "Legacy Modernisation & AI Integration · Karlsruhe & Remote",
     "titleLine1": "Complex web applications.",
     "titleHighlight": "Built cleanly. Maintainable for the long run.",
-    "text": "Xento supports companies with demanding PHP/Symfony development, software architecture and the modernisation of existing systems. Personally delivered by Alexander Liebing – with more than 20 years of experience in software development.",
+    "text": "Xento modernises existing PHP/Symfony systems and builds LLM and RAG features into running web applications. Personally delivered by Alexander Liebing – with more than 20 years of experience in software development.",
     "ctaPrimary": "Discuss a project",
     "ctaSecondary": "View project experience",
     "profile": {
@@ -78,11 +78,13 @@
         "title": "Customer portal & ERP architecture (energy utility)",
         "description": "Modernisation and maintenance of the customer and contract portal for a leading service provider in the energy sector. Focus on scalability, performance and modern REST APIs.",
         "tasks": [
-          "Refactoring of outdated SOAP interfaces into high-performance REST APIs.",
-          "Design and implementation of a flexible dunning module.",
-          "Performance tuning of database queries and bulk processing (CSV/cron jobs).",
-          "Ensuring GDPR compliance (automated deadline checks and data deletion).",
-          "Establishing monitoring and log analysis with Graylog for error detection."
+          "Refactored the tariff-change process: load time cut from 1.3 minutes to 15 seconds through fewer service requests and caching.",
+          "Rebuilt the MaLo-Ident process after the format changeover, together with three other developers, in very little time.",
+          "Replaced outdated SOAP interfaces with high-performance REST APIs.",
+          "Optimised database queries and bulk processing (CSV/cron jobs) so large data volumes run through reliably.",
+          "Ensured GDPR compliance through automated deadline checks and data deletion.",
+          "Detected errors earlier by establishing monitoring and log analysis with Graylog.",
+          "Built the dunning process as a flexible module that adapts to different rules."
         ],
         "tags": ["PHP 8.x", "Slim", "Idiorm", "REST API", "Docker", "Graylog", "SQL", "Scrum"]
       },
@@ -92,10 +94,10 @@
         "title": "Workflow module for multi-tenancy (shipyard)",
         "description": "Extraction of a complex shipbuilding-processing module from a monolith into a standalone, multi-tenant Symfony workflow module.",
         "tasks": [
-          "Extension of the Symfony Workflow core components for tenant-specific logic.",
-          "Implementation of complex process chains using pipeline patterns (event dispatcher/subscriber).",
+          "Made one module usable for several tenants by extending the Symfony Workflow components with tenant-specific logic.",
+          "Modelled complex process chains with pipeline patterns (event dispatcher/subscriber) to keep them extensible.",
           "Creation of Twig extensions for dynamic sub-templates (permission and role control).",
-          "Writing technical specifications and system documentation in Markdown."
+          "Eased handover with a technical specification and system documentation in Markdown."
         ],
         "tags": ["Symfony 3/4", "Workflow Engine", "Doctrine", "Pipeline Pattern", "Event-Dispatcher"]
       },
@@ -147,7 +149,7 @@
           "badge": "Turing College project",
           "title": "HikeSense – AI hiking planner",
           "approach": "Workflow-first",
-          "description": "A hiking planner for the Black Forest, Lake Constance and the Palatinate Forest, used through an AI chat: day hikes and multi-day tours on eight long-distance trails with places to stay, walking times and weather. The code decides, the model words it – every route comes from the database, and every number in the answer is checked against the tool results.",
+          "description": "Problem: planning a hike means collecting route, accommodation, walking time and weather from separate sites – and AI answers like to invent numbers. Approach: HikeSense plans day hikes and multi-day tours on eight long-distance trails in the Black Forest, Lake Constance and the Palatinate Forest through a chat. The code decides, the model words it: every route comes from the database, and every number is checked against the tool results. Result: 577 verified day hikes, live.",
           "highlights": [
             "LangGraph workflow with fixed steps: guard, structured output, search, answer and grounding check.",
             "PostGIS search with a transparent ✓/✗ check for every condition, plus near misses.",
@@ -162,7 +164,7 @@
           "badge": "Turing College project",
           "title": "CineSense – films by mood",
           "approach": "Agent-first",
-          "description": "A film finder that searches by mood instead of title – for example “like Interstellar, but shorter”. A ReAct agent decides on its own which tools to use and in which order: the agentic counterpart to the fixed workflow of HikeSense.",
+          "description": "Problem: searching by title or genre does not help when you want a film by mood – for example “like Interstellar, but shorter”. Approach: a ReAct agent decides on its own which tools to use and in which order, the agentic counterpart to the fixed workflow of HikeSense. Result: mood-based search over film plots, live.",
           "highlights": [
             "ReAct agent loop with LangGraph: the model plans, calls tools and evaluates intermediate results.",
             "RAG search over film plots (search_plot) for content- and mood-based matches.",
@@ -187,11 +189,11 @@
     "badge": "The expert behind Xento",
     "title": "About Alexander Liebing",
     "imageAlt": "Portrait of Alexander Liebing",
-    "lead": "I am a passionate software architect and full-stack developer with a strong focus on robustness, clean code and pragmatic solutions.",
+    "lead": "I modernise existing PHP/Symfony systems and build LLM and RAG features into running web applications.",
     "paragraphs": [
-      "Since my IHK certification as an internet software developer (2001) and my apprenticeship as an IT specialist (2003), I have designed and maintained systems for well-known companies such as EnBW (Powercloud) and Lürssen shipyard.",
-      "With Xento I bundle my many years of experience from enterprise and SME projects under my own brand. Whether you need additional development capacity (Symfony / Laravel), architectural advice on legacy migrations or professional support for system operations: I work with you directly.",
-      "In 2026 I extended my backend experience with AI engineering: in the AI Engineer programme at Turing College I built AI applications with RAG and agents (LangGraph) that are running live – HikeSense and CineSense."
+      "My current focus is on two things: modernising grown PHP/Symfony systems and integrating AI features into existing applications. HikeSense and CineSense, both live, are the final projects of my AI Engineer programme at Turing College.",
+      "I come from the backend: since my IHK certification as an internet software developer (2001) and my apprenticeship as an IT specialist (2003) I have designed and maintained systems for EnBW (Powercloud) and Lürssen shipyard, most recently for six years as lead backend developer of a customer and contract portal.",
+      "I am open to new projects, remote or in the Karlsruhe area: additional development capacity (Symfony / Laravel), architectural advice on legacy migrations and AI features for existing applications. I work with you directly."
     ],
     "features": [
       { "title": "IHK certified", "description": "Software development 2001 / 2003" },

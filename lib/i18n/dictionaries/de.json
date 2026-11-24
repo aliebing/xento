@@ -17,10 +17,10 @@
     "languageLabel": "Sprache"
   },
   "hero": {
-    "eyebrow": "Softwareentwicklung & IT-Beratung · Karlsruhe & Remote",
+    "eyebrow": "Legacy-Modernisierung & KI-Integration · Karlsruhe & Remote",
     "titleLine1": "Komplexe Webanwendungen.",
     "titleHighlight": "Sauber entwickelt. Langfristig wartbar.",
-    "text": "Xento unterstützt Unternehmen bei anspruchsvoller PHP-/Symfony-Entwicklung, Softwarearchitektur und der Modernisierung bestehender Systeme. Persönlich umgesetzt von Alexander Liebing – mit über 20 Jahren Erfahrung in der Softwareentwicklung.",
+    "text": "Xento modernisiert bestehende PHP-/Symfony-Systeme und baut LLM- und RAG-Funktionen in laufende Webanwendungen ein. Persönlich umgesetzt von Alexander Liebing – mit über 20 Jahren Erfahrung in der Softwareentwicklung.",
     "ctaPrimary": "Projekt besprechen",
     "ctaSecondary": "Projekterfahrung ansehen",
     "profile": {
@@ -78,11 +78,13 @@
         "title": "Kundenportal & ERP-Architektur (Energieversorger)",
         "description": "Modernisierung und Betreuung des Kunden- und Vertragsportals für einen führenden Energiewirtschafts-Dienstleister. Fokussiert auf Skalierbarkeit, Performance und moderne REST-APIs.",
         "tasks": [
-          "Refactoring veralteter SOAP-Schnittstellen zu hochperformanten REST-APIs.",
-          "Konzeption und Implementierung eines flexiblen Mahnverfahren-Moduls.",
-          "Performance-Tuning von Datenbankabfragen und Massenverarbeitung (CSV/Cron-Jobs).",
-          "Sicherstellung der DSGVO-Konformität (automatisierte Fristenprüfung und Datenlöschung).",
-          "Etablierung eines Monitorings und Log-Analysen über Graylog zur Fehlererkennung."
+          "Tarifwechsel-Prozess refactored: Ladezeit von 1,3 Minuten auf 15 Sekunden gesenkt, durch weniger Service-Requests und Caching.",
+          "MaLo-Ident-Verfahren nach der Formatumstellung gemeinsam mit drei weiteren Entwicklern in kürzester Zeit neu aufgesetzt.",
+          "Veraltete SOAP-Schnittstellen durch performante REST-APIs ersetzt.",
+          "Datenbankabfragen und Massenverarbeitung (CSV/Cron-Jobs) optimiert, damit große Datenmengen zuverlässig durchlaufen.",
+          "DSGVO-Konformität durch automatisierte Fristenprüfung und Datenlöschung sichergestellt.",
+          "Fehler früher erkannt: Monitoring und Log-Analyse über Graylog etabliert.",
+          "Mahnverfahren als flexibles Modul umgesetzt, das sich an unterschiedliche Regeln anpassen lässt."
         ],
         "tags": ["PHP 8.x", "Slim", "Idiorm", "REST API", "Docker", "Graylog", "SQL", "Scrum"]
       },
@@ -92,10 +94,10 @@
         "title": "Workflow-Modul für Mehrmandantenfähigkeit (Schiffswerft)",
         "description": "Überführung eines komplexen Bauabwicklungsmoduls aus einem Monolithen in ein eigenständiges, mandantenfähiges Symfony-Workflow-Modul.",
         "tasks": [
-          "Erweiterung der Symfony Workflow-Kernkomponenten für mandantenspezifische Logik.",
-          "Implementierung komplexer Prozessketten mittels Pipeline-Patterns (Event-Dispatcher/Subscriber).",
+          "Ein Modul für mehrere Mandanten nutzbar gemacht, indem die Symfony-Workflow-Komponenten um mandantenspezifische Logik erweitert wurden.",
+          "Komplexe Prozessketten über Pipeline-Patterns (Event-Dispatcher/Subscriber) abgebildet und so erweiterbar gehalten.",
           "Erstellung von Twig-Extensions für dynamische Sub-Templates (Rechte- und Rollensteuerung).",
-          "Verfassen der technischen Spezifikationen und Systemdokumentation in Markdown."
+          "Übergabe erleichtert durch technische Spezifikation und Systemdokumentation in Markdown."
         ],
         "tags": ["Symfony 3/4", "Workflow Engine", "Doctrine", "Pipeline Pattern", "Event-Dispatcher"]
       },
@@ -147,7 +149,7 @@
           "badge": "Turing College Projekt",
           "title": "HikeSense – KI-Wanderplaner",
           "approach": "Workflow-first",
-          "description": "Wanderplaner für Schwarzwald, Bodensee und Pfälzerwald per KI-Chat: Tages- und Mehrtagestouren auf acht Fernwanderwegen mit Unterkünften, Gehzeiten und Wetter. Der Code entscheidet, das Modell formuliert – jede Route kommt aus der Datenbank, jede Zahl in der Antwort wird gegen die Tool-Ergebnisse geprüft.",
+          "description": "Problem: Wer eine Wanderung plant, sucht Route, Unterkunft, Gehzeit und Wetter auf getrennten Seiten zusammen – und KI-Antworten erfinden gern Zahlen. Vorgehen: HikeSense plant Tages- und Mehrtagestouren auf acht Fernwanderwegen in Schwarzwald, Bodensee und Pfälzerwald per Chat. Der Code entscheidet, das Modell formuliert: Jede Route kommt aus der Datenbank, jede Zahl wird gegen die Tool-Ergebnisse geprüft. Ergebnis: 577 geprüfte Tagestouren, live verfügbar.",
           "highlights": [
             "LangGraph-Workflow mit festen Schritten: Guard, Structured Output, Suche, Antwort und Grounding-Prüfung.",
             "PostGIS-Suche mit nachvollziehbarer ✓/✗-Prüfung jeder Bedingung und Beinahe-Treffern.",
@@ -162,7 +164,7 @@
           "badge": "Turing College Projekt",
           "title": "CineSense – Filme nach Stimmung",
           "approach": "Agent-first",
-          "description": "Film-Finder, der nicht nach Titeln, sondern nach Stimmung sucht – etwa „wie Interstellar, nur kürzer“. Ein ReAct-Agent entscheidet selbst, welche Werkzeuge er in welcher Reihenfolge nutzt: der agentische Gegenentwurf zum festen Workflow von HikeSense.",
+          "description": "Problem: Titel- und Genresuche helfen nicht, wenn man einen Film nach Stimmung sucht – etwa „wie Interstellar, nur kürzer“. Vorgehen: Ein ReAct-Agent entscheidet selbst, welche Werkzeuge er in welcher Reihenfolge nutzt, der agentische Gegenentwurf zum festen Workflow von HikeSense. Ergebnis: Stimmungssuche über Filmhandlungen, live verfügbar.",
           "highlights": [
             "ReAct-Agent-Loop mit LangGraph: Das Modell plant, ruft Tools auf und bewertet Zwischenergebnisse.",
             "RAG-Suche über Filmhandlungen (search_plot) für inhaltliche und stimmungsbasierte Treffer.",
@@ -187,11 +189,11 @@
     "badge": "Der Experte hinter Xento",
     "title": "Über Alexander Liebing",
     "imageAlt": "Porträt von Alexander Liebing",
-    "lead": "Ich bin leidenschaftlicher Softwarearchitekt und Fullstack-Entwickler mit starkem Fokus auf Robustheit, sauberen Code (Clean Code) und pragmatische Lösungen.",
+    "lead": "Ich modernisiere bestehende PHP-/Symfony-Systeme und baue LLM- und RAG-Funktionen in laufende Webanwendungen ein.",
     "paragraphs": [
-      "Seit meiner IHK-Zertifizierung als Softwareentwickler im Internet (2001) und meiner Ausbildung zum Fachinformatiker (2003) habe ich Systeme für namhafte Konzerne wie die EnBW (Powercloud) und die Lürssenwerft konzipiert und betreut.",
-      "Mit Xento bündele ich meine langjährige Erfahrung aus Enterprise- und KMU-Projekten unter einer eigenen Marke. Ob Sie zusätzliche Entwicklungskapazität (Symfony / Laravel), architektonische Beratung bei Legacy-Migrationen oder professionellen Support für den Systembetrieb suchen: Ich arbeite direkt mit Ihnen zusammen.",
-      "2026 habe ich meine Backend-Erfahrung um AI Engineering erweitert: In der Weiterbildung zum AI Engineer am Turing College habe ich KI-Anwendungen mit RAG und Agenten (LangGraph) entwickelt, die live im Einsatz sind – HikeSense und CineSense."
+      "Aktuell konzentriere ich mich auf zwei Dinge: die Modernisierung gewachsener PHP-/Symfony-Systeme und die Integration von KI-Funktionen in bestehende Anwendungen. Als Abschlussprojekte der AI-Engineer-Weiterbildung am Turing College sind HikeSense und CineSense entstanden, beide live.",
+      "Ich komme aus dem Backend: Seit der IHK-Zertifizierung als Softwareentwickler im Internet (2001) und der Ausbildung zum Fachinformatiker (2003) habe ich Systeme für die EnBW (Powercloud) und die Lürssenwerft konzipiert und betreut, zuletzt sechs Jahre als Lead Backend Developer eines Kunden- und Vertragsportals.",
+      "Offen bin ich für neue Projekte, remote oder im Raum Karlsruhe: zusätzliche Entwicklungskapazität (Symfony / Laravel), Architekturberatung bei Legacy-Migrationen und KI-Funktionen für bestehende Anwendungen. Ich arbeite direkt mit Ihnen zusammen."
     ],
     "features": [
       { "title": "IHK-Zertifiziert", "description": "Softwareentwicklung 2001 / 2003" },

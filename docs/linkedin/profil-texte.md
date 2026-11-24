@@ -14,50 +14,44 @@ Das englische Profil legst du unter „Profil in einer anderen Sprache hinzufüg
 
 ### Headline (max. 220 Zeichen)
 
-Senior Software Engineer & AI Engineer · PHP 8 / Symfony · Softwarearchitektur & Legacy-Modernisierung · RAG & KI-Agenten (LangGraph) · 20+ Jahre Erfahrung · Xento IT-Solutions
+Senior Software Engineer | PHP/Symfony, Python, LangGraph, RAG | Legacy-Modernisierung und LLM-Integration in bestehende Webanwendungen | Xento IT-Solutions
 
 ### Info (max. 2.600 Zeichen)
 
-Komplexe Webanwendungen. Sauber entwickelt. Langfristig wartbar.
+Ich modernisiere bestehende PHP-/Symfony-Systeme und baue LLM- und RAG-Funktionen in laufende Webanwendungen ein.
 
-Ich bin Senior Software Engineer mit über 20 Jahren Erfahrung und unterstütze Unternehmen unter meiner Marke Xento IT-Solutions bei anspruchsvoller PHP-/Symfony-Entwicklung, Softwarearchitektur und der Modernisierung bestehender Systeme.
+Aktuell konzentriere ich mich auf zwei Dinge: die Modernisierung gewachsener PHP-/Symfony-Systeme und die Integration von KI-Funktionen in bestehende Anwendungen. Als Abschlussprojekte der AI-Engineer-Weiterbildung am Turing College sind zwei Anwendungen entstanden, beide live:
+▸ HikeSense (hikesense.de) – KI-Wanderplaner mit LangGraph-Workflow, PostGIS-Suche, RAG-Wissensindex und Grounding-Prüfung jeder Zahl. 577 geprüfte Tagestouren, erstellt aus 4.014 OSM-Relationen.
+▸ CineSense (cinesense.de) – Filme nach Stimmung, mit ReAct-Agent (LangGraph) und RAG-Suche über Filmhandlungen.
+Stack: Python, FastAPI, Next.js, LangGraph.
 
-Besonders wertvoll bin ich dort, wo eine geschäftskritische Anwendung über Jahre gewachsen ist und jemand mit Erfahrung sie weiterentwickeln, modernisieren oder stabilisieren muss:
+Ich komme aus dem Backend: über 20 Jahre Erfahrung, darunter sechs Jahre als Lead Backend Developer eines Kunden- und Vertragsportals für einen Energiedienstleister, ein mandantenfähiges Workflow-Modul für eine Schiffswerft und E-Commerce-Automatisierung für einen Security-Software-Hersteller. IHK-zertifiziert (2001, 2003).
 
-▸ Softwareentwicklung – Symfony, Laravel, REST-APIs
-▸ Architektur & Modernisierung – Legacy-Systeme, Refactoring, Migration
-▸ Technische Betreuung – Performance, Fehleranalyse, Monitoring, Updates
-
-Ausgewählte Projekte: Kunden- und Vertragsportal eines Energiedienstleisters (6 Jahre als Lead Backend Developer), mandantenfähiges Workflow-Modul für eine Schiffswerft, E-Commerce-Automatisierung für einen Security-Software-Hersteller, Buchungsstrecken und White-Label-Reisesysteme.
-
-AI Engineering: 2026 habe ich die Weiterbildung zum AI Engineer am Turing College abgeschlossen. Dabei sind zwei Anwendungen entstanden, die live laufen und bewusst zwei gegensätzliche Ansätze zeigen:
-▸ HikeSense (hikesense.de) – KI-Wanderplaner, Workflow-first: LangGraph-Graph mit festen Schritten, PostGIS-Suche, RAG-Wissensindex und Grounding-Prüfung jeder Zahl.
-▸ CineSense (cinesense.de) – Filme nach Stimmung, Agent-first: ReAct-Agent-Loop mit LangGraph und RAG-Suche über Filmhandlungen.
-Stack: Next.js, Python, FastAPI, LangGraph · LLMs: GPT-4o mini (HikeSense), Claude Haiku 5.5 (CineSense).
-
-Damit verbinde ich robuste Backend-Erfahrung mit der Integration von LLMs in bestehende Systeme.
-
-IHK-zertifizierter Softwareentwickler (2001) und Fachinformatiker (2003). Remote oder vor Ort im Raum Karlsruhe.
+Offen bin ich für Projekte, remote oder im Raum Karlsruhe: Modernisierung bestehender PHP-/Symfony-Systeme, Architekturberatung bei Legacy-Migrationen und LLM-/RAG-Funktionen für bestehende Webanwendungen.
 
 Kontakt: aliebing@gmx.de · xento-phi.vercel.app
 
 ### Berufserfahrung
 
 **Inhaber & Senior Software Engineer** – Xento IT-Solutions · Selbstständig · Karlsruhe / Remote
-Softwareentwicklung, Architektur und technische Betreuung geschäftskritischer Webanwendungen (PHP 8, Symfony, Laravel, REST-APIs). Seit 2026 außerdem KI-Anwendungen mit RAG und Agenten.
+Xento modernisiert bestehende PHP-/Symfony-Systeme und integriert LLM-/RAG-Funktionen in laufende Webanwendungen.
+Skills: PHP 8 · Symfony · Laravel · REST API · Python · LangGraph · RAG · Docker
 *Startdatum bitte selbst ergänzen.*
 
 **Lead Backend Developer** – Kundenportal & ERP-Architektur (Energieversorger) · 07/2019 – 03/2026
-Modernisierung und Betreuung des Kunden- und Vertragsportals eines führenden Energiewirtschafts-Dienstleisters.
-• Refactoring veralteter SOAP-Schnittstellen zu performanten REST-APIs
-• Konzeption und Umsetzung eines flexiblen Mahnverfahren-Moduls
-• Performance-Tuning von Datenbankabfragen und Massenverarbeitung
-• DSGVO-Konformität: automatisierte Fristenprüfung und Datenlöschung
-• Monitoring und Log-Analyse mit Graylog
-Skills: PHP 8 · Slim · REST API · Docker · Graylog · SQL · Scrum
+Kunden- und Vertragsportal eines führenden Energiewirtschafts-Dienstleisters (Abrechnung, Verträge, Mahnwesen).
+• Tarifwechsel-Prozess refactored: Ladezeit von 1,3 Minuten auf 15 Sekunden, durch weniger Service-Requests und Caching
+• MaLo-Ident-Verfahren nach der Formatumstellung mit drei weiteren Entwicklern in kürzester Zeit neu aufgesetzt
+• Veraltete SOAP-Schnittstellen durch performante REST-APIs ersetzt
+• Datenbankabfragen und Massenverarbeitung optimiert, damit große Datenmengen zuverlässig durchlaufen
+• DSGVO-Konformität durch automatisierte Fristenprüfung und Datenlöschung sichergestellt
+• Fehler früher erkannt: Monitoring und Log-Analyse mit Graylog
+• Mahnverfahren als flexibles Modul umgesetzt, das sich an unterschiedliche Regeln anpassen lässt
+Skills: PHP 8 · Slim · REST API · SOAP · Caching · Docker · Graylog · SQL · Cron-Jobs · DSGVO · Scrum
 
 **Symfony Core Developer** – Workflow-Modul für Mehrmandantenfähigkeit (Schiffswerft) · 01/2017 – 12/2017
-Überführung eines Bauabwicklungsmoduls aus einem Monolithen in ein mandantenfähiges Symfony-Workflow-Modul (Workflow-Komponente, Pipeline-Pattern, Event-Dispatcher, Twig-Extensions).
+Schiffswerft mit komplexer Bauabwicklung. Ein Bauabwicklungsmodul aus einem Monolithen für mehrere Mandanten nutzbar gemacht und erweiterbar gehalten; übergeben mit technischer Spezifikation und Systemdokumentation.
+Skills: Symfony 3/4 · Workflow-Komponente · Doctrine · Pipeline-Pattern · Event-Dispatcher · Twig
 
 **Symfony Core Developer** – E-Commerce-Automatisierung & Subscription (Security-Software) · 2016 – 2017
 Automatisierung von Abo- und Vertragsänderungsprozessen im globalen Kundenportal (Sonata Admin, Doctrine, E2E-Tests mit Selenium/Cucumber).
@@ -84,11 +78,15 @@ Nachweis-URL: Link zum Zertifikat eintragen, sobald es da ist (nach dem 23.11.20
 ### Projekte
 
 **HikeSense – KI-Wanderplaner** · 08/2026 – 11/2026 · verknüpft mit Turing College
-Wanderplaner für Schwarzwald, Bodensee und Pfälzerwald per KI-Chat. Workflow-first: Ein LangGraph-Graph mit festen Schritten (Guard, Structured Output, Suche, Antwort, Grounding). Jede Route kommt aus der Datenbank, jede Zahl in der Antwort wird gegen die Tool-Ergebnisse geprüft.
+Problem: Wer eine Wanderung plant, sucht Route, Unterkunft, Gehzeit und Wetter auf getrennten Seiten zusammen, und KI-Antworten erfinden gern Zahlen.
+Vorgehen: Workflow-first. Ein LangGraph-Graph mit festen Schritten (Guard, Structured Output, Suche, Antwort, Grounding). Jede Route kommt aus der Datenbank, jede Zahl wird gegen die Tool-Ergebnisse geprüft.
+Ergebnis: 577 geprüfte Tagestouren aus 4.014 OSM-Relationen auf acht Fernwanderwegen, live verfügbar.
 Links: https://hikesense.de · https://github.com/aliebing/hikesense
 
 **CineSense – Filme nach Stimmung** · 08/2026 – 11/2026 · verknüpft mit Turing College
-Film-Finder nach Stimmung statt Titel. Agent-first: Ein ReAct-Agent-Loop mit LangGraph entscheidet selbst, welche Tools er nutzt, darunter eine RAG-Suche über Filmhandlungen (search_plot).
+Problem: Titel- und Genresuche helfen nicht, wenn man einen Film nach Stimmung sucht („wie Interstellar, nur kürzer“).
+Vorgehen: Agent-first. Ein ReAct-Agent-Loop mit LangGraph entscheidet selbst, welche Tools er nutzt, darunter eine RAG-Suche über Filmhandlungen (search_plot).
+Ergebnis: Stimmungssuche über Filmhandlungen, live verfügbar.
 Link: https://cinesense.de
 
 ### Im Fokus (Featured)
@@ -108,47 +106,43 @@ PHP · Symfony · Softwarearchitektur · Legacy-Modernisierung · AI Engineering
 
 ### Headline
 
-Senior Software Engineer & AI Engineer · PHP 8 / Symfony · Software Architecture & Legacy Modernisation · RAG & AI Agents (LangGraph) · 20+ years of experience · Xento IT-Solutions
+Senior Software Engineer | PHP/Symfony, Python, LangGraph, RAG | Legacy modernisation and LLM integration for existing web applications | Xento IT-Solutions
 
 ### About
 
-Complex web applications. Built cleanly. Maintainable for years.
+I modernise existing PHP/Symfony systems and build LLM and RAG features into running web applications.
 
-I am a senior software engineer with more than 20 years of experience. Under my brand Xento IT-Solutions I help companies with demanding PHP/Symfony development, software architecture and the modernisation of existing systems.
+My current focus is on two things: modernising grown PHP/Symfony systems and integrating AI features into existing applications. The final projects of my AI Engineer programme at Turing College are two applications, both live:
+▸ HikeSense (hikesense.de) – AI hiking planner with a LangGraph workflow, PostGIS search, a RAG knowledge index and a grounding check on every number. 577 verified day hikes, built from 4,014 OSM relations.
+▸ CineSense (cinesense.de) – films by mood, with a ReAct agent (LangGraph) and RAG search over film plots.
+Stack: Python, FastAPI, Next.js, LangGraph.
 
-I add the most value where a business-critical application has grown over years and needs someone experienced to extend, modernise or stabilise it:
+I come from the backend: more than 20 years of experience, including six years as lead backend developer of a customer and contract portal for an energy services provider, a multi-tenant workflow module for a shipyard and e-commerce automation for a security software vendor. IHK certified (2001, 2003).
 
-▸ Software development – Symfony, Laravel, REST APIs
-▸ Architecture & modernisation – legacy systems, refactoring, migration
-▸ Technical support – performance, debugging, monitoring, updates
-
-Selected projects: customer and contract portal for an energy services provider (6 years as lead backend developer), a multi-tenant workflow module for a shipyard, e-commerce automation for a security software vendor, booking engines and white-label travel systems.
-
-AI engineering: in 2026 I completed the AI Engineer programme at Turing College. It produced two live applications that deliberately show two opposite approaches:
-▸ HikeSense (hikesense.de) – AI hiking planner, workflow-first: a LangGraph graph with fixed steps, PostGIS search, a RAG knowledge index and a grounding check on every number.
-▸ CineSense (cinesense.de) – films by mood, agent-first: a ReAct agent loop with LangGraph and RAG search over film plots.
-Stack: Next.js, Python, FastAPI, LangGraph · LLMs: GPT-4o mini (HikeSense), Claude Haiku 5.5 (CineSense).
-
-This lets me combine solid backend experience with integrating LLMs into existing systems.
-
-IHK-certified software developer (2001) and IT specialist (2003). Remote or on site in the Karlsruhe area.
+I am open to projects, remote or in the Karlsruhe area: modernising existing PHP/Symfony systems, architectural advice on legacy migrations and LLM/RAG features for existing web applications.
 
 Contact: aliebing@gmx.de · xento-phi.vercel.app
 
 ### Experience
 
 **Owner & Senior Software Engineer** – Xento IT-Solutions · Self-employed · Karlsruhe / Remote
-Development, architecture and technical support for business-critical web applications (PHP 8, Symfony, Laravel, REST APIs). Since 2026 also AI applications with RAG and agents.
+Xento modernises existing PHP/Symfony systems and integrates LLM/RAG features into running web applications.
+Skills: PHP 8 · Symfony · Laravel · REST API · Python · LangGraph · RAG · Docker
 
 **Lead Backend Developer** – Customer portal & ERP architecture (energy provider) · 07/2019 – 03/2026
-Modernisation and maintenance of the customer and contract portal of a leading energy services provider.
-• Refactored legacy SOAP interfaces into fast REST APIs
-• Designed and built a flexible dunning module
-• Tuned database queries and bulk processing
-• GDPR compliance: automated retention checks and data deletion
-• Monitoring and log analysis with Graylog
+Customer and contract portal of a leading energy services provider (billing, contracts, dunning).
+• Refactored the tariff-change process: load time cut from 1.3 minutes to 15 seconds through fewer service requests and caching
+• Rebuilt the MaLo-Ident process after the format changeover, with three other developers, in very little time
+• Replaced legacy SOAP interfaces with fast REST APIs
+• Optimised database queries and bulk processing so large data volumes run through reliably
+• Ensured GDPR compliance through automated retention checks and data deletion
+• Detected errors earlier with monitoring and log analysis in Graylog
+• Built the dunning process as a flexible module that adapts to different rules
+Skills: PHP 8 · Slim · REST API · SOAP · Caching · Docker · Graylog · SQL · cron jobs · GDPR · Scrum
 
 **Symfony Core Developer** – Multi-tenant workflow module (shipyard) · 01/2017 – 12/2017
+Shipyard with complex build processing. Made a build-processing module from a monolith usable for several tenants and kept it extensible; handed over with a technical specification and system documentation.
+Skills: Symfony 3/4 · Workflow component · Doctrine · pipeline pattern · event dispatcher · Twig
 **Symfony Core Developer** – E-commerce automation & subscriptions (security software) · 2016 – 2017
 **Symfony Core Developer** – Booking engine migration (web agency) · 2015 – 2016
 **Magento Developer** – White-label travel systems (travel portals) · 2009 – 2014

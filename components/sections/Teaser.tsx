@@ -5,13 +5,9 @@ const TECH_BADGES = ["PHP 8", "Symfony", "Laravel", "Vue.js", "Docker"];
 
 export default function Teaser({ dict }: { dict: Dictionary["hero"] }) {
   return (
-   <section className="relative w-full bg-[#060b13] text-white flex items-center justify-center overflow-hidden px-6 py-10 md:py-10">
+   <section className="relative w-full bg-[#0b1220] text-white flex items-center justify-center overflow-hidden px-6 py-10 md:py-10">
 
-      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10 overflow-hidden p-8 rounded-3xl border border-gray-900/30 bg-[#070c16]/20 backdrop-blur-sm">
-        {/* STARKER INNERER GLOW 1: Exakt bei top: 15% und left: 10% innerhalb dieser Box */}
-        <div className="absolute top-[15%] left-[12%] w-[300px] h-[300px] bg-cyan-500/20 rounded-full blur-[100px] pointer-events-none z-0 mix-blend-screen" />
-        {/* STARKER INNERER GLOW 2: Auf der rechten Seite balanciert */}
-        <div className="absolute bottom-[13%] right-[5%] w-[350px] h-[350px] bg-blue-500/20 rounded-full blur-[90px] pointer-events-none z-0 mix-blend-screen" />
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10 overflow-hidden p-8 rounded-3xl border border-gray-800/30 bg-[#0f182a]/20 backdrop-blur-sm">
 
         {/* Linke Spalte: Text & Buttons */}
         <div className="lg:col-span-7 space-y-6 text-left">
@@ -21,23 +17,23 @@ export default function Teaser({ dict }: { dict: Dictionary["hero"] }) {
           
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
             {dict.titleLine1} <br />
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="text-cyan-400">
               {dict.titleHighlight}
             </span>
           </h1>
           
-          <p className="text-gray-400 text-base md:text-lg leading-relaxed max-w-xl">{dict.text}</p>
+          <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-xl">{dict.text}</p>
           
           <div className="flex flex-wrap gap-4 pt-4">
             <a
               href="#contact"
-              className="px-6 py-3 font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-lg shadow-lg shadow-blue-600/20 transition-all duration-200"
+              className="px-6 py-3 font-semibold text-white bg-cyan-600 hover:bg-cyan-500 rounded-lg transition-all duration-200"
             >
               {dict.ctaPrimary}
             </a>
             <a
               href="#experience"
-              className="px-6 py-3 font-semibold text-gray-300 bg-gray-900/60 hover:bg-gray-800 border border-gray-800 hover:border-gray-700 rounded-lg transition-all duration-200"
+              className="px-6 py-3 font-semibold text-gray-300 bg-gray-900/60 hover:bg-gray-800 border border-gray-700 hover:border-gray-700 rounded-lg transition-all duration-200"
             >
               {dict.ctaSecondary}
             </a>
@@ -46,7 +42,7 @@ export default function Teaser({ dict }: { dict: Dictionary["hero"] }) {
 
         {/* Rechte Spalte: Profil-Karte */}
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
-          <div className="w-full max-w-sm bg-gradient-to-b from-[#2328339c] to-[#0a1125bd] border border-gray-800/60 rounded-2xl p-8 flex flex-col items-center text-center relative backdrop-blur-sm">
+          <div className="w-full max-w-sm bg-[#141e32]/60 border border-gray-700/60 rounded-2xl p-8 flex flex-col items-center text-center relative backdrop-blur-sm">
             
             {/* Profilbild-Container */}
             <div className="relative w-45 h-45 rounded-full overflow-hidden border-2 border-cyan-500/30 p-1 mb-4">
@@ -67,14 +63,14 @@ export default function Teaser({ dict }: { dict: Dictionary["hero"] }) {
             </p>
 
             {/* Statistiken */}
-            <div className="grid grid-cols-2 gap-4 w-full my-6 border-t border-b border-gray-800/80 py-4">
+            <div className="grid grid-cols-2 gap-4 w-full my-6 border-t border-b border-gray-700/80 py-4">
               <div>
-                <p className="text-2xl font-extrabold text-blue-400">20+</p>
-                <p className="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-1">{dict.profile.yearsLabel}</p>
+                <p className="text-2xl font-extrabold text-cyan-400">20+</p>
+                <p className="text-[10px] uppercase tracking-wider text-gray-300 font-medium mt-1">{dict.profile.yearsLabel}</p>
               </div>
               <div>
-                <p className="text-2xl font-extrabold text-blue-400">15+</p>
-                <p className="text-[10px] uppercase tracking-wider text-gray-400 font-medium mt-1">{dict.profile.projectsLabel}</p>
+                <p className="text-2xl font-extrabold text-cyan-400">15+</p>
+                <p className="text-[10px] uppercase tracking-wider text-gray-300 font-medium mt-1">{dict.profile.projectsLabel}</p>
               </div>
             </div>
 
@@ -83,7 +79,7 @@ export default function Teaser({ dict }: { dict: Dictionary["hero"] }) {
               {TECH_BADGES.map((tech) => (
                 <span 
                   key={tech} 
-                  className="px-2.5 py-1 text-xs font-medium text-gray-400 bg-gray-900/80 border border-gray-800/60 rounded"
+                  className="px-2.5 py-1 text-xs font-medium text-gray-300 bg-gray-900/80 border border-gray-700/60 rounded"
                 >
                   {tech}
                 </span>

@@ -27,7 +27,7 @@ export default function Navbar({ lang, dict, minimal, hideSwitcher }: NavbarProp
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#060b13]/40 backdrop-blur-md border-b border-gray-800/20">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#0b1220]/40 backdrop-blur-md border-b border-gray-700/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
         <Logo lang={lang} />
 
@@ -39,7 +39,7 @@ export default function Navbar({ lang, dict, minimal, hideSwitcher }: NavbarProp
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="text-sm font-normal text-gray-400 hover:text-white transition-colors"
+                    className="text-sm font-normal text-gray-300 hover:text-white transition-colors"
                   >
                     {dict[link.key]}
                   </Link>
@@ -48,7 +48,7 @@ export default function Navbar({ lang, dict, minimal, hideSwitcher }: NavbarProp
 
               <Link
                 href="#contact"
-                className="px-6 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 rounded-full shadow-lg shadow-cyan-500/20 transition-all duration-200"
+                className="px-6 py-2.5 text-sm font-semibold text-white bg-cyan-600 hover:bg-cyan-500 rounded-full transition-all duration-200"
               >
                 {dict.contact}
               </Link>
@@ -65,7 +65,7 @@ export default function Navbar({ lang, dict, minimal, hideSwitcher }: NavbarProp
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-menu"
               aria-label={isMobileMenuOpen ? dict.closeMenu : dict.openMenu}
-              className="md:hidden p-2 text-gray-400 hover:text-white focus:outline-none"
+              className="md:hidden p-2 text-gray-300 hover:text-white focus:outline-none"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMobileMenuOpen ? (
@@ -82,14 +82,14 @@ export default function Navbar({ lang, dict, minimal, hideSwitcher }: NavbarProp
       {!minimal && isMobileMenuOpen ? (
         <nav
           id="mobile-menu"
-          className="md:hidden border-t border-gray-800/40 bg-[#060b13]/95 backdrop-blur-md px-6 py-4 flex flex-col gap-4"
+          className="md:hidden border-t border-gray-700/40 bg-[#0b1220]/95 backdrop-blur-md px-6 py-4 flex flex-col gap-4"
         >
           {NAV_ANCHORS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-sm font-normal text-gray-400 hover:text-white transition-colors"
+              className="text-sm font-normal text-gray-300 hover:text-white transition-colors"
             >
               {dict[link.key]}
             </Link>
@@ -97,7 +97,7 @@ export default function Navbar({ lang, dict, minimal, hideSwitcher }: NavbarProp
           <Link
             href="#contact"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="mt-2 inline-block w-fit px-6 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-lg shadow-cyan-500/20 transition-all duration-200"
+            className="mt-2 inline-block w-fit px-6 py-2.5 text-sm font-semibold text-white bg-cyan-600 rounded-full transition-all duration-200"
           >
             {dict.contact}
           </Link>

@@ -13,7 +13,7 @@ export default function Footer({ lang, dict }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-[#060b13] border-t border-gray-900 py-8 px-6 text-xs text-gray-500">
+    <footer className="w-full bg-[#0b1220] border-t border-gray-800 py-8 px-6 text-xs text-gray-400">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
 
         {/* Logo-Branding links */}

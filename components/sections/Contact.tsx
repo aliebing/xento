@@ -58,9 +58,8 @@ export default function Contact({ lang, dict }: ContactProps) {
   };
 
   return (
-    <section id="contact" className="w-full bg-[#0c1016] text-white py-30 px-6 relative overflow-hidden border-t border-b border-gray-700/70">
+    <section id="contact" className="w-full bg-[#101a2b] text-white py-30 px-6 relative overflow-hidden border-t border-b border-gray-700/70">
       {/* Subtiler Hintergrund-Glow */}
-      <div className="absolute bottom-[5%] right-[-5%] w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none z-0 mix-blend-screen" />
 
       <div className="max-w-7xl mx-auto relative z-10 w-full">
         
@@ -69,8 +68,8 @@ export default function Contact({ lang, dict }: ContactProps) {
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
             {dict.title}
           </h2>
-          <div className="w-12 h-1 bg-blue-500 mx-auto rounded-full mt-2"></div>
-          <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed pt-2">
+          <div className="w-12 h-1 bg-cyan-500 mx-auto rounded-full mt-2"></div>
+          <p className="text-gray-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed pt-2">
             {dict.intro}
           </p>
         </div>
@@ -79,10 +78,10 @@ export default function Contact({ lang, dict }: ContactProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* LINKSE SPALTE: Kontaktdaten */}
-          <div className="lg:col-span-4 bg-[#0b111e]/40 border border-gray-800/60 rounded-2xl p-8 backdrop-blur-sm shadow-xl space-y-8 h-full flex flex-col justify-between">
+          <div className="lg:col-span-4 bg-[#141e32]/40 border border-gray-700/60 rounded-2xl p-8 backdrop-blur-sm space-y-8 h-full flex flex-col justify-between">
             <div>
               <h3 className="text-xl font-bold text-gray-100 mb-3">{dict.detailsTitle}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-300 text-sm leading-relaxed">
                 {dict.detailsText}
               </p>
             </div>
@@ -96,7 +95,7 @@ export default function Contact({ lang, dict }: ContactProps) {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-500 block">{dict.emailLabel}</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">{dict.emailLabel}</span>
                   <a href="mailto:aliebing@gmx.de" className="text-sm font-semibold text-gray-200 hover:text-cyan-400 transition-colors">aliebing@gmx.de</a>
                 </div>
               </div>
@@ -109,7 +108,7 @@ export default function Contact({ lang, dict }: ContactProps) {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-500 block">{dict.phoneLabel}</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">{dict.phoneLabel}</span>
                   <a href="tel:+491629405960" className="text-sm font-semibold text-gray-200 hover:text-cyan-400 transition-colors">+49 162 9405960</a>
                 </div>
               </div>
@@ -122,7 +121,7 @@ export default function Contact({ lang, dict }: ContactProps) {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-500 block">{dict.linkedinLabel}</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">{dict.linkedinLabel}</span>
                   <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-gray-200 hover:text-cyan-400 transition-colors">Alexander Liebing</a>
                 </div>
               </div>
@@ -136,7 +135,7 @@ export default function Contact({ lang, dict }: ContactProps) {
                   </svg>
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-500 block">{dict.locationLabel}</span>
+                  <span className="text-[10px] uppercase font-bold tracking-wider text-gray-400 block">{dict.locationLabel}</span>
                   <p className="text-sm font-semibold text-gray-200 leading-relaxed">{dict.locationValue}</p>
                 </div>
               </div>
@@ -157,7 +156,7 @@ export default function Contact({ lang, dict }: ContactProps) {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-[#0b111e]/60 border border-gray-800 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
+                  className="w-full bg-[#141e32]/60 border border-gray-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
                   placeholder={dict.form.namePlaceholder}
                 />
               </div>
@@ -171,7 +170,7 @@ export default function Contact({ lang, dict }: ContactProps) {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-[#0b111e]/60 border border-gray-800 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
+                  className="w-full bg-[#141e32]/60 border border-gray-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
                   placeholder={dict.form.emailPlaceholder}
                 />
               </div>
@@ -186,7 +185,7 @@ export default function Contact({ lang, dict }: ContactProps) {
                   name="company" 
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full bg-[#0b111e]/60 border border-gray-800 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
+                  className="w-full bg-[#141e32]/60 border border-gray-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600"
                   placeholder={dict.form.companyPlaceholder}
                 />
               </div>
@@ -198,12 +197,12 @@ export default function Contact({ lang, dict }: ContactProps) {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full bg-[#0b111e]/60 border border-gray-800 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors appearance-none cursor-pointer"
+                  className="w-full bg-[#141e32]/60 border border-gray-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors appearance-none cursor-pointer"
                   style={{ backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'></polyline></svg>")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 16px center', backgroundSize: '16px' }}
                 >
-                  <option value="development" className="bg-[#060b13]">{dict.form.serviceOptions.development}</option>
-                  <option value="architecture" className="bg-[#060b13]">{dict.form.serviceOptions.architecture}</option>
-                  <option value="support" className="bg-[#060b13]">{dict.form.serviceOptions.support}</option>
+                  <option value="development" className="bg-[#0b1220]">{dict.form.serviceOptions.development}</option>
+                  <option value="architecture" className="bg-[#0b1220]">{dict.form.serviceOptions.architecture}</option>
+                  <option value="support" className="bg-[#0b1220]">{dict.form.serviceOptions.support}</option>
                 </select>
               </div>
             </div>
@@ -217,13 +216,13 @@ export default function Contact({ lang, dict }: ContactProps) {
                 rows={6}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full bg-[#0b111e]/60 border border-gray-800 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600 resize-none"
+                className="w-full bg-[#141e32]/60 border border-gray-700 focus:border-cyan-500/50 rounded-xl px-4 py-3.5 text-sm text-gray-200 outline-none transition-colors placeholder-gray-600 resize-none"
                 placeholder={dict.form.messagePlaceholder}
               ></textarea>
             </div>
 
             {/* Statusmeldungen */}
-            {status.loading && <p className="text-sm text-gray-400">{dict.form.sending}</p>}
+            {status.loading && <p className="text-sm text-gray-300">{dict.form.sending}</p>}
             {status.success && <p className="text-sm text-green-500">{status.success}</p>}
             {status.error && <p className="text-sm text-red-500">{status.error}</p>}
             </div>
@@ -233,7 +232,7 @@ export default function Contact({ lang, dict }: ContactProps) {
               <button 
                 type="submit" 
                 disabled={status.loading}
-                className={`w-full px-6 py-4 font-semibold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 rounded-lg shadow-lg shadow-cyan-500/20 transition-all duration-200 ${status.loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                className={`w-full px-6 py-4 font-semibold text-white bg-cyan-600 hover:bg-cyan-500 rounded-lg transition-all duration-200 ${status.loading ? 'opacity-50 cursor-not-allowed' : ''}`}
               >           
                 {dict.form.submit}      
               </button>
